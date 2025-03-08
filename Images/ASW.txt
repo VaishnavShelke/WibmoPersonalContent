@@ -1,0 +1,165 @@
+Minimum Qualifications:
+2 - 4 years of experience in a Java 8 or later, Spring boot, Hibernate, SOAP Web services
+Experience in application design, software development, and testing, in an Agile environment.
+Experience with relational and NoSQL databases
+Experience designing and developing REST APIs for high volume clients.
+Experience with continuous integration tools & /(e.g. Docker and Kubernetes)
+Experience with version control systems like Git
+Experience working with asynchronous messaging systems like Kafka
+Experience with Atlassian software development and collaboration tools (JIRA, Confluence, etc.), a plus.
+Position requires a Bachelor’s degree in Computer Science, Engineering, or a related field
+
+
+Microservices
+REST/Hypermedia and SOA (Service Oriented Architecture)
+MPA (Multiple Page Application), Dependency Injection and IOC (Inversion Of Control)
+Agile development techniques and Scrum development process
+
+
+Preferred Qualifications
+• Strong design and coding skills with Java/J2EE.
+• Mandatory experience with n-tier web application development and REST API’s.
+• Solid experience in frameworks like Spring or Spring Boot.
+• Working experience with Kafka, Redis, or NoSQL datastores is a plus.
+• Hands on experience with database technologies like MySQL, DB2, Oracle.
+• Knowledge of Unix/Linux and working in a shell environment.
+• Experience with Continuous Integration & Development and automation tools such as Jenkins, Artifactory, Git etc.
+• Experience with Agile and Test-Driven Development methodology.
+• Strong analytical skills with excellent problem-solving ability.
+• Ability to present complex ideas in a clear, concise way.
+
+Coding experience in multiple programming languages
+A background of solving highly-complex, analytical and numerical problems
+Experience of DevOps and Agile methodology and associated toolsets and methodologies
+The ability to relate everyday work to the strategic vision of the feature, platform, domain and enterprise teams while focusing on business outcomes
+Experience of implementing programming best practices around scalability, automation, virtualisation, optimisation, availability and performance
+
+
+
+AWS Certification Kywords to remember:
+Geography:
+	1. AWS Region - AWS Avaliabilty Zone - AWS Edge Location
+	
+	
+**************** Identity and Access Management ********************************
+IAM -> Identity and Access Management
+AWS -> AccessKeys and Using AWS from CLI
+AWS -> Cloud Shell
+IAM Roles for Serves-> 
+**************** Identity and Access Management ********************************
+Budget And Billing In AWS
+*********************************************************************************
+Amazon EC2
+	-> To Bootstrap our instances we write EC2 User Data Script
+	-> Storeage space 
+		$ Network Attached (EBS and EFS)
+		$ Hardware
+	-> What is SSH traffic, how is it different from http traffic
+	-> Difference between private ip and public ipv4, ipv4 and ipv6
+	-> EC2 instance types
+	-> Security Groups
+IAM Roles ->
+AWS Pricing
+*********************************************************************************
+&&&&&&&&&&&&&&&&&& ELASTIC BLOCK STORE &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+EBS Volumes --> Like pen drive {network drives} we can also get EC2 Instance Store for better IO performance {It is emphmeral -- You lose it if you stop it}
+EBS Snapshot ---> Disaster Recovey Strategy
+AMI -> Amazon Machine Image, Costumization of EC2, until now we were uains amazons public emi {i.e amazon linux 2 ami} ... There could be AWS Marketplace AMI
+EC2 Image Builder
+Elastic File System **** works only with linux
+EFS - IA {Infrequent Access}
+EC2 Instance Store
+Amazon FSX
+&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
+
+
+Scalaibility Vs Elasticity
+Agility
+Elastic Load Balancing {You can expose single point of access to your application,Provide https for you website}
+ELB provided by AWS
+	1. Application Load Balancer (for http/https traffic) Layer 7
+	2. Network Load Balancer for (TCP/UDP) Layer 4
+	3. Gateway Load Balancer Layer 3 (Firewall)
+Application Load Balancer
+Auto Scaling Group
+*Waht is subnet
+Auto Scaling -> Manual Scaling, Simple Setp Scaling, Target Tracking Scaling, Schedule scaling,Predicitive Scaling
+Taget Group
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^AMAZON S3^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Scaling the storage
+. Backup and Storage . Disaster Recovery . HOst Application . Host Media . Dilevering Updates . Static WebPage . Similar to google drive
+Amazon S3 Buckets
+Amazon S3 Security - User Based, Resource Based
+Policy Json Object {
+	"Principle" : "The user or account the policy allows"
+}
+{IAM users ~ IAM Permissions :: EC2 Instance ~ EC2 Instance Roles/IAM Roles }
+S3 Policy
+S3 Static Website Hosting
+S3 Versioning
+S3 Replication
+S3 Storage Classes <-> S3 Lifecycle Configuration ,-> S3 Intellegent tiering
+AWS Snow Family <-> Snowball Device <-> Edge Computing <-> OPS Hub
+Hybrid Cloud Storage
+Block Storage (EBS + EC2 Instance Store) vs File Storage (EFS) vs Object Storage in AWS (S3 + Glacier)
+AWS Storage Gateway
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+AWS Databases RDS
+Read Replicas, Making Read Replica of RDS
+MultiAZ
+MultiRegion Database
+Elastic Cache
+DyanmoDB {NoSQL} / Dynamo DB Accelerator DAX
+DynamoDB - Global Tables
+Redshift (For Data Warehousing and Analytics)
+Amazon EMR Elastic Map Reduce
+Amazon Ethena {Analyse S3 data using athena queries}
+{What is server less server}
+Amazon QUICKSITE
+DocumentDB {built, On top of MongoDB}
+Amazon Neptune (Graph database)
+QLDB Quantum Ledger Database Vs Blocakchain {Amaxon Managed Blockchain}
+AWS Glue {Used to prepare and trnsform data for analytics}
+DMS Databse Migration Service {Source DB --> EC2 Managed DMS Software ---> Traget DB} {Homogenous and Heterogeneous migration}
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+Docker ;->
+	Elastic Container Service (ECS)
+	Fargate (No need to provision any EC2 Containers), Serverless offerring
+	Elastic Container Registry
+ServerLess ;> Developers will not have to manage servers {You just dont manaage , provision or see the servers, Ex : S3,DyanamoDB,Fargate(not ECS),Lambda}
+Labmda ; -> Allows to run functions in the cloudn{Event Driven} {Cron Job}
+AWS Batch -> Lambda has tme limit , Batch has not time limit-Not Serverless-Works on the EC2 instance
+Amazon Lights Tail --> Simplified AWS
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+Deploying and Managing Infrastructure at Scale
+
+CloudFormation {Infrastructure as Code} ~ AWS Cloud Developement Kit
+Elastic Beanstalk
+AWS Code deploy -AWS Code commit - AWS Code build - CodePipeline - CodeArtifact{wibmo/archiva (Artifact Management)}-AWS Codestar - AWS Cloud9
+System Manager (SSM)
+AWS Ops works
+*********************************************************************************************************************************************
+
+AMAZON Route 53(DNS)
+Simaple Routing Policy vs Weighted Routing Policy vs Latency Routing policy Vs Failover Routing Policy
+Cloud Front (Cache)
+S3 Transfer Acceleration
+AWS Global Accelerator (Data going throughAWS private network from Edge location to different Region)
+AWS Outpost
+AWS Wavelength
+AWS Local Zones
+
+#############################################################################################################
+Amazon SQS {Simple Queue Services}
+Amazon SNS {Publisher/Subscriber} {Simple notification service}
+
+#############################################################################################################
+CloudWatch Metrics/CloudWatch Alarm

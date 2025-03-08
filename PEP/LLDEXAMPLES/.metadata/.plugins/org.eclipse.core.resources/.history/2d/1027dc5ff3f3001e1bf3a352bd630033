@@ -1,0 +1,8 @@
+package elevator.model;
+
+public class ElevatorCar {
+	private String id;
+	private boolean isActive = false;
+	private String currentFloor;
+	private
+}

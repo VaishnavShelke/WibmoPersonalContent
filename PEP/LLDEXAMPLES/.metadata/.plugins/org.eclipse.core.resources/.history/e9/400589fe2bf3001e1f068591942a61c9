@@ -1,0 +1,21 @@
+package bmshow.model;
+
+import java.util.HashMap;
+
+public class Theater {
+
+	private String id = null;
+	private String name = null;
+	private HashMap<String,Screen> allScreens = null;
+	public Theater(String thid,String thname){
+		id = thid;
+		name = thname;
+		allScreens = new HashMap<>();
+	}
+	
+	void addScreen(String scid) throws Exception {
+		if(allScreens.containsKey(scid))
+	}
+
+	
+}

@@ -1,0 +1,6 @@
+package bmshow.model;
+
+public class Screen {
+
+	HashSet<Seat>
+}

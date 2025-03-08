@@ -1,0 +1,19 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import bmshow.model.Theater;
+
+public class TheatreService {
+
+	static Map<String,Theater> allTheatersMap = new HashMap<>();
+	
+	public static Theater createTheater(String name) {
+		String id = UUID.randomUUID().toString();
+		Theater th = new Theater(id, name);
+		allTheatersMap.put(id, th);
+		return th;
+	}
+}

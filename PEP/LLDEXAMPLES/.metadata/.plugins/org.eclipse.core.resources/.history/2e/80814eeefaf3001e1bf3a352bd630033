@@ -1,0 +1,18 @@
+package elevator.service;
+
+import elevator.model.Direction;
+import elevator.model.ElevatorSystem;
+
+public class ElevatorSystemService {
+
+	private ElevatorSystem es;
+	
+	public ElevatorSystemService(ElevatorSystem es) {
+		this.es = es;
+	}
+	
+	public void takeExternalInstructions(Direction instruction) {
+		for()
+	}
+}
+

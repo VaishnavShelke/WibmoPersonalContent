@@ -1,0 +1,11 @@
+1696327975314	Rename type 'Web3GtTransferTokenRequest'
+1696331809253	Rename local variable 'createTokenTransactionBean'
+1696392336843	Rename local variable 'itemInfoList'
+1696479698038	Move compilation unit
+1696482229381	Rename type 'AccountVerificationAcknHandler'
+1696482265000	Rename method 'getAcknoweldgementFromGameServers'
+1696482282473	Rename method 'sendAddressVerifedFromGameServers'
+1696482316396	Rename field 'accountVerificationAcknHandler'
+1696486079158	Rename local variable 'jsonVerificationAckn'
+1696498014636	Delete element
+1696585601911	Rename local variable 'jsonObject'

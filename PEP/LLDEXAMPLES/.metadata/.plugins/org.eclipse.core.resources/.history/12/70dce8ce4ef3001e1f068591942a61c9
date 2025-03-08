@@ -1,0 +1,15 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import bmshow.model.Screen;
+import bmshow.model.Theater;
+
+public class ScreenService {
+	Map<String,Screen> allScreenMap = new HashMap<>();
+	
+	public static Screen createScreen(Theater theater,String screenName) {
+		String id = UUID
+	}
+}

@@ -1,0 +1,15 @@
+package bmshow.model;
+
+public class Movie {
+
+	String id;
+	String title;
+	public Movie(String id, String title) {
+		super();
+		this.id = id;
+		this.title = title;
+	}
+	
+	
+	
+}

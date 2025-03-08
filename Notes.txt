@@ -1,0 +1,29 @@
+Some Important Solidity -Yarn Commands
+
+Build and get ABI :  yarn solcjs --bin --abi --include-path node_modules/ --base-path . -o . SimpleStorage.sol
+
+How to set network in hardhat
+yarn hardhat run scripts/deploy.js --network hardhat
+
+Verifying deployed contacts using etherScan
+
+network.config	09:02:32
+
+ethers.provider.getBloackNumber()
+yarn hardhat node 
+
+11;46:00 GAS Optimization
+*************OPCODES
+
+Transfer all Storage to memory to save gas
+
+Coinbase Commerce
+// https://thesixdragons.com/
+
+""""""calldata""""" datatype in solidity
+Mercel Root to store addresses
+
+
+
+ Personal PCCB :: Not enforcing goerli
+ Personal PCCB :: Whne user removes wallet one-by-one

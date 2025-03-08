@@ -1,0 +1,20 @@
+package bmshow.model;
+
+import java.util.List;
+
+public class Booking {
+
+	String id;
+	Show show;
+	List<Seat> selectedSeats;
+	Theater theater;
+	public Booking(String id, Show show, List<Seat> selectedSeats, Theater theater) {
+		super();
+		this.id = id;
+		this.show = show;
+		this.selectedSeats = selectedSeats;
+		this.theater = theater;
+	}
+	
+	
+}

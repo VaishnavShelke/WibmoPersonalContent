@@ -1,0 +1,31 @@
+package bmshow.model;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class Screen {
+
+	HashMap<String,Seat> allSeats = null;
+	String screenId = null;
+	Screen(String sc){
+		screenId = sc;
+		allSeats = new HashMap<>();
+	}
+	
+	
+	public HashMap<String, Seat> getAllSeats() {
+		return allSeats;
+	}
+	public void setAllSeats(HashMap<String, Seat> allSeats) {
+		this.allSeats = allSeats;
+	}
+	public String getScreenId() {
+		return screenId;
+	}
+	public void setScreenId(String screenId) {
+		this.screenId = screenId;
+	}
+	
+	
+	
+}

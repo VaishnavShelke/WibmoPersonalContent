@@ -1,0 +1,28 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.UUID;
+
+import bmshow.model.Booking;
+import bmshow.model.Seat;
+import bmshow.model.Show;
+
+public class BookingService {
+	
+	static Map<String,Booking> allBookingsMap = new HashMap<>();
+	
+	public Booking createBooking(Show show,List<Seat> selectedSeat) throws Exception{
+		show.blockseats(selectedSeat);
+		String id = UUID.randomUUID().toString();
+		Booking booking  = new Booking(id, show, selectedSeat, show.getTheatre());
+		allBookingsMap.put(id, booking);
+		return booking;
+	}
+	
+	void removeBooking(String id) {
+		Booking booking  = allBookingsMap.get(id);
+	}
+
+}

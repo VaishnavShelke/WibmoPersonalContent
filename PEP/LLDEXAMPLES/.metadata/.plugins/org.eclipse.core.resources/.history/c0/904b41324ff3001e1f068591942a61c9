@@ -1,0 +1,22 @@
+package bmshow;
+
+import bmshow.model.Screen;
+import bmshow.model.Theater;
+import bmshow.service.ScreenService;
+import bmshow.service.TheatreService;
+
+public class TestService {
+
+	public static void main(String[] args) {
+		try {
+			Theater th1 = TheatreService.createTheater("PVR Thanisandra");
+			Theater th2 = TheatreService.createTheater("INOX Lido");
+			
+			Screen sc11 = ScreenService.createScreen(th1, "Floor 1 2") 
+			System.out.println(TheatreService.getAllTheaters());
+		}catch (Exception e) {
+			System.out.println("Exception + :: "+ e.getMessage());
+		}
+		
+	}
+}

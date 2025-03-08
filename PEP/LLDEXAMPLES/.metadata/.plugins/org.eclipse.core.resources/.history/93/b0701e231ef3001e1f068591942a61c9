@@ -1,0 +1,7 @@
+package bmshow.service;
+
+public class ScreenService {
+	
+	static Map<String,Screen> allScreenMap = new HashMap<>();
+
+}

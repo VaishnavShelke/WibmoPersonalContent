@@ -1,0 +1,31 @@
+package elevator.service;
+
+import java.util.LinkedList;
+import java.util.TreeSet;
+
+import elevator.model.Direction;
+import elevator.model.DirectionsEnum;
+import elevator.model.ElevatorCar;
+
+public class ElevatorCarService {
+	private ElevatorCar ev;
+	private TreeSet<Direction> instructionList=null;
+	
+	public ElevatorCarService(ElevatorCar ev) {
+		this.ev = ev;
+		instructionList = new TreeSet<>((a,b)-> a.getFloor()-b.getFloor());
+	}
+	
+	private void takeInternalCommand(Direction instruction) throws Exception {
+		Direction nextMove = instructionList.first();
+		if(ev.ge) {
+			
+		}else if(nextMove.getDir() = ){
+			
+		}
+	}
+	
+	private void takeExternalCommand(Direction istruction) {
+		
+	}
+}

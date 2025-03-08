@@ -1,0 +1,41 @@
+
+
+Git
+vaishnav-shelke-iam-at-234879819211
+tOPGdtcM+4Lo3K4YuKqj0Hj7OZwW4ptJgEjPAgEYmos=
+
+http://localhost:3000/tokenmint?txnId=20231015183650114&loadUiUrl=aHR0cDovL2xvY2FsaG9zdDoxMDAxL3Rva2VubWludC9zZXJ2ZXIvbG9hZC11aS8yMDIzMTAxNTE4MzY1MDExNA==
+https://3.110.165.219:3000/
+
+
+/home/ec2-user/intg/webserver/tokenmint-ui/TokenMintUI/build
+
+
+sudo chown -R nginx:nginx /home/ec2-user/intg/webserver/tokenmint-ui/TokenMintUI/build
+
+sudo chmod -R 777 /home/ec2-user/intg/webserver/tokenmint-ui/TokenMintUI/build
+
+/web-deploy-server/tokenmint-ui/
+
+
+server{
+        listen 80;
+        listen [::]:80;
+
+        root /web-deploy-server/TokenMintUI/build;
+        location /{
+                root /web-deploy-server/TokenMintUI/build;
+        }
+}
+
+
+31027111252353, playerInfo={"playerName":"Kavita","playerId":"20231027111252353","items":{"1001_10001":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10004":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10005":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10002":{"itemQuantity":"3","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10003":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10006":{"itemQuantity":"1","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null},"1001_10007":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null}}})
+11:12:56.631 [http-nio-9001-exec-1] INFO  c.g.i.s.TokenMintInterfaceHandler - Create Token Request :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027111256614","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"Kavita","playerId":"20231027111252353","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"https://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:9001/battlegrounds/landingPage/20231027111256614","otp":"578062"}
+11:12:56.710 [http-nio-9001-exec-1] INFO  c.g.i.service.HttpConnectService - **** Sending request to https://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:1001/tokenmint/createtoken/1001
+11:12:56.711 [http-nio-9001-exec-1] INFO  c.g.i.service.HttpConnectService - **** Payload :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027111256614","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"Kavita","playerId":"20231027111252353","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"https://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:9001/battlegrounds/landingPage/20231027111256614","otp":"578062"}
+11:12:56.723 [http-nio-9001-exec-1] ERROR c.g.i.service.HttpConnectService - !!!!! Error in sending request Connect to ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:1001 [ec2-15-207-222-151.ap-south-1.compute.amazonaws.com/172.31.8.70] failed: Connection refused
+11:12:56.723 [http-nio-9001-exec-1] INFO  c.g.i.service.HttpConnectService - **** Response :: null
+11:12:56.723 [http-nio-9001-exec-1] ERROR com.game.inventory.utility.Utility - String to Object Conversion Failed for class : class com.game.inventory.beans.CreateTokenResponse argument "content" is null
+11:12:56.723 [http-nio-9001-exec-1] ERROR c.g.i.s.TokenMintInterfaceHandler - Error Response From TokenMintRequest :: null
+
+

@@ -1,0 +1,22 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import bmshow.model.Booking;
+import bmshow.model.Seat;
+import bmshow.model.Show;
+
+public class BookingService {
+	
+	static Map<String,Booking> allBookingsMap = new HashMap<>();
+	
+	public Booking createBooking(Show show,List<Seat> selectedSeat) throws Exception{
+		show.blockseats(selectedSeat);
+		Booking booking  = new Booking(null, show, selectedSeat, null);
+		
+		return booking;
+	}
+
+}

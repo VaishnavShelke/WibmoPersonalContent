@@ -1,0 +1,251 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PlushCV - One Page Two Column Resume
+% LaTeX Template
+% Version 1.0 (11/28/2021)
+%
+% Author:
+% Shubham Mazumder (http://mazumder.me)
+%
+% Hacked together from:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add more icon options 
+% 4. Fix hacky left alignment on contact line
+% 5. Remove Hacky fix for awkward extra vertical space
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the vertical limit.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Icons:
+%%Main: https://icons8.com/icons/carbon-copy
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{plushcv}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\usepackage{setspace}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{Vaishnav}{Shelke}
+{Java Backend Software Engineer | NIT - Nagpur (2022-UG)}
+
+\sectionsep
+ {\href{https://www.linkedin.com/in/vaishnav-shelke/}{Linkedln-Vaishnav-Shelke}} \textbullet{}  {\href{mailto:vaishnavshelke22@gmail.com}{vaishnavshelke22@gmail.com}} \textbullet{}  {\href{tel:+919765233984}{9765233984}}
+\sectionsep
+
+% \namesection{Firstname}{Lastname}{Full Stack Software Engineer}{\contactline{\href{https://www.mazumder.me}{mazumder.me}}{\h{sansquoi}}{\href{https://www.linkedin.com/mazumders}{mazumders}}{\href{mailto:shubham.mazumder@gmail.com}{first.last@email.com}}{\href{tel:+1999999999}{9999999999}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{minipage}[t]{0.70\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{PAYU - Wibmo}
+\descript{| Associate Software Engineer}
+\location{July 2022 – Current | Bangalore, India}
+\vspace{\topsep} % Hacky fix for awkward extra 
+Spring Boot Application (New Product)
+\vspace{\topsep} % Hacky fix for awkward extra 
+\begin{tightemize}
+\sectionsep
+\item Developed Restful API using Java Spring Boot for payment aggregators and implemented SSL-secured HTTP clients to interface with 
+card networks.
+\item Minimized transaction routing latency to 50ms by implementing Multi-threading and caching using Redis and Caffeine cache\item Made a new card checkout utility with UI using Thymeleaf and Spring MVC.  \item Have experience with Connection Pooling, Thread Pooling, multi-tenant SQL database connection, Generics, Query and criteria to fetch the data from DB. \item Onboarded multiple banks and aggregators on the product.
+\end{tightemize}
+
+\vspace{\topsep} % Hacky fix for awkward extra 
+3D Secure System (Legacy Product)
+\begin{tightemize}
+\sectionsep
+\item Built a Reactive Restful API using Java Vert.x, an asynchronous and event-driven programming library, to route card transactions.
+\item Performed Junit testing on various APIs, mocked asynchronous HTTP clients,Kafka consumers and External API calls using Java Mockito. \item Resolved several production issues involving various code bases that are part of micro-services and distributed architecture. 
+\end{tightemize}
+\sectionsep
+
+\runsubsection{TATA STEEL (BSL)}
+\descript{| (Internship) Graduate Engineer Trainee }
+\location{April 2021 – June 2021 | Odisha, India}
+\begin{tightemize}
+\sectionsep
+\item Analyzed the electric arc furnace fume extraction system at Tata Steel Melting Shop to improve efficiency and reliability.
+\end{tightemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+
+\runsubsection{TokenMint}
+\descript{| AWS Cloud | S3 | EC2 | Nginx | Docker | RDS | Elastic Cache }
+\vspace{\topsep} % Hacky fix for awkward extra 
+TOKENMINT Server 
+\descript{| Java, Spring Boot, Redis, MySQL}
+\begin{tightemize}
+\item Onboards online games to enable them to transfer in-game assets owned by a player to his blockchain account.
+\end{tightemize}
+TOKENMINT UI 
+\descript{| JavaScript, React.js , Redux, Bootstrap ,MetaMask, Ether.js}
+\begin{tightemize}
+\item Authenticates the player's blockchain account by interacting with the player's MetaMask wallet in browser.
+\end{tightemize}
+WEB3 Gateway Server 
+\descript{| JavaScript, Node.js, Ether.js}
+\begin{tightemize}
+\item Transfers game asset NFTs from the Game's Ethereum Wallet to the player's wallet upon successful ownership authentication.
+\item Monitors Ethereum blockchain events associated with the deployed smart contract using WebSocket technology..
+\end{tightemize}
+GAME Inventory ERC 1155 Smart Contract
+\descript{| Sepolia Ethereum TestNet, Solidity}
+\begin{tightemize}
+\item Deployed On Ethereum Test Network, keeps the track of the ownership of all in-game asset NFTs.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{GAME SERVER}
+\descript{| 2023 | Java, SpringBoot, Redis, NoSQL DB, Thymeleaf, Bootstrap}
+\begin{tightemize}
+\item Keeps track of in-games items of the player, Integrates with TOKENMINT Server to transfer player assets on Ethereum blockchain.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Awards} 
+% \begin{tabular}{rll}
+% 2020	     & Finalist & Lorem Ipsum\\
+% 2018	     & $2^{nd}$ & Dolor Sit Amet\\
+% 2015	     & Finalist  & Cras posuere\\
+% \\
+% \end{tabular}
+% \sectionsep
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.25\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\sectionsep
+Java \textbullet{} JavaScript \\ SQL \textbullet{} CSS \textbullet{} HTML \\
+\sectionsep
+\subsection{Libraries/Frameworks}
+\sectionsep
+ \textbullet{} SpringBoot \textbullet{} Node.js \textbullet{} React.js
+ \textbullet{} Vert.x \\
+\sectionsep
+\subsection{Database Management}
+\sectionsep
+MySQL \textbullet{} MongoDB \textbullet{} Redis
+\sectionsep
+\subsection{Cloud}
+\sectionsep
+AWS \textbullet{} EC2 \textbullet{} S3 \textbullet{} RDS \textbullet{} Elastic Cache \textbullet{} IAM
+\sectionsep
+\subsection{DevOps}
+\sectionsep
+Linux \textbullet{} Docker \textbullet{} Nginx 
+\sectionsep
+\subsection{WEB3}
+\sectionsep
+Blockchain \textbullet{} Ethereum \textbullet{} Smart Contracts  \textbullet{} DApp \textbullet{} Solidity
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+\subsection{Visvesvaraya National Institute of Technology}
+\descript{B Tech in Mechanical Engineering}
+\location{June 2018 - 2022 | Nagpur, Maharashtra}
+CGPA : 8.56 / 10.0  \\
+
+
+\sectionsep
+\subsection{Nagpur University}
+\descript{Maharashtra 12th Board HSC}
+\location{June 2016 - 2018 | Nagpur, Maharashtra}
+\location{Science (Electronics)} 
+Percentage : 90.34\% \\
+\sectionsep
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %     REFERENCES
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements} 
+{\textbf{JEE Mains 2018}, Achieved AIR 7441 with >99.23 Percentile.}
+\\
+\sectionsep
+{\textbf{Aakruti 2019 Finalist}}, Finalist in Computer Aided Design Competition Organized By SolidWorks India.
+\\
+\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Coursework}
+
+% \subsection{Graduate}
+% Graduate Algorithms \textbullet{}\\ 
+% Advanced Computer Architecture \textbullet{}\\ 
+% Operating Systems \textbullet{}\\ 
+% Artificial Intelligence \textbullet{}\\
+% Visualization For Scientific Data \\
+% \sectionsep
+
+% \subsection{Undergraduate}
+
+% Database Management Systems \textbullet{}\\
+% Object Oriented Analysis and Design \textbullet{}\\
+% Artificial Intelligence and Expert Systems \textbullet{}\\
+% Scripting Languages and Web Tech \textbullet{}\\
+% Software Engineering \\
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
+

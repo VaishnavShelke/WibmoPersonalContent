@@ -1,0 +1,13 @@
+package elevator.service;
+
+import elevator.model.ElevatorSystem;
+
+public class ElevatorSystemService {
+
+	private ElevatorSystem es;
+	
+	public ElevatorSystemService(ElevatorSystem es) {
+		this.es = es;
+	}
+}
+

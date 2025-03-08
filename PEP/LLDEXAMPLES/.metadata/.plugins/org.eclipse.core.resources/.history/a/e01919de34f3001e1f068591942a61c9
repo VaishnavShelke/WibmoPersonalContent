@@ -1,0 +1,36 @@
+package bmshow.service;
+
+import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import bmshow.model.Movie;
+import bmshow.model.Screen;
+import bmshow.model.Show;
+import bmshow.model.Theater;
+
+public class ShowService {
+
+	static Map<String,Show> allShows = new HashMap<>();
+	
+	
+	public static List<Show> getAllShowsForMovie(String movieId){
+		List<Show> showList = new ArrayList<>();
+		for(Map.Entry<String, Show> ety : allShows.entrySet()) {
+			if(ety.getValue().getId() == movieId) {
+				showList.add(ety.getValue());
+			}
+		}
+		return showList;
+	}
+	
+	public static Show getShow(String showId) {
+		return allShows.get(showId);
+	}
+	
+	public static Show createShow(Theater theatre,Screen sc,Movie mv,Timestamp startTime) {
+		
+	}
+}

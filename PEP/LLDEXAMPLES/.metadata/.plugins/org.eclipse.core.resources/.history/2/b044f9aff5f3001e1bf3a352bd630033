@@ -1,0 +1,5 @@
+package elevator.service;
+
+public class ElevatorSystemService {
+
+}

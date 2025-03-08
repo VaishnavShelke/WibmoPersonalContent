@@ -1,0 +1,34 @@
+{
+	"tokenMintTransactionId" : "c331df6b-9299-439e-9466-1f5c8bc2c2df",
+	
+	"playerInfo" :
+    {
+        "playerId" : "20230801115743465",
+        "playerName" : "BestHuman_012",
+		"playerProfilePic" : null,
+		"tokenMintUserId" : "202308011199999999"
+		"gameLogo" : "https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"
+		"playerEthAccounts" : ["0xE1A9365BD0e172B61Eae56090581569Caf40e76E","0x0775426A4c27Dd15849194343D6e11326232EEf0"]
+	},
+	"tokenMintUserInfo" : 
+	{
+		"tokenMintUserId" : "202308011199999999",
+		"tokenMintUserName" : "Vaishnav Shelke",
+		"tokenMintUserLogo" : "https://i.pinimg.com/originals/0f/e9/bb/0fe9bba766201d818d6c5dea51a28957.png",
+		"tokenMintUserProfileRedirectionURL" : "http://localhost:3000/token-flex-ui/202308011199999999",
+		"firstTimeUser" : "Y",
+		"tokenMintSignUpURL" : "http://localhost:8081/token-flex/"
+	},
+	"tokenMintTransactionInfo":
+	{
+		"tokenMintTransactionId" : "c331df6b-9299-439e-9466-1f5c8bc2c2df",
+		"gameId" : "1001",
+		"itemId" : "1001_10003",
+		"gameTransactionId" : "2bd5f684-3bf7-49a0-b781-b2d3d933ad60",
+		"itemQuantity" : "1"
+		"itemName" : "BLUE SCHOOL UNIFORM SET (FEMALE)",
+		"itemLogo" : "https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10003.png"
+	}
+
+}
+

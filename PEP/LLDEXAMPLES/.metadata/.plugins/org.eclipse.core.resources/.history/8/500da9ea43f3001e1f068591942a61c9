@@ -1,0 +1,17 @@
+package bmshow;
+
+import bmshow.model.Theater;
+import bmshow.service.TheatreService;
+
+public class TestService {
+
+	public static void main(String[] args) {
+		try {
+			Theater th = TheatreService.createTheater("PVR Thanisandra");
+			System.out.println(TheatreService.getAllTheaters());
+		}catch (Exception e) {
+			System.out.println("Exception + :: "+ e.getMessage());
+		}
+		
+	}
+}

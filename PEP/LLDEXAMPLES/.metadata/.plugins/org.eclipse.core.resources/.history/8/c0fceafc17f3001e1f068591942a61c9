@@ -1,0 +1,13 @@
+package bmshow.model;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class Screen {
+
+	HashSet<Seat> allSeats = null;
+	String screenId = null;
+	Screen(String sc){
+		screenId = sc;
+	}
+}

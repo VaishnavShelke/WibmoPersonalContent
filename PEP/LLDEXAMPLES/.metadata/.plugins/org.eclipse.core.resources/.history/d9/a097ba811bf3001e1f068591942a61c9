@@ -1,0 +1,14 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import bmshow.model.Theater;
+
+public class TheatreService {
+
+	Map<Theater> allTheaters = new HashMap<>();
+	
+	
+	
+}

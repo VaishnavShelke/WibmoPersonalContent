@@ -1,0 +1,14 @@
+package bmshow.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import bmshow.model.Theater;
+
+public class TheatreService {
+
+	List<Theater> allTheaters = new ArrayList<>();
+	
+	
+	
+}

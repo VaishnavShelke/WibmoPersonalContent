@@ -1,0 +1,19 @@
+Code Pens 
+
+Checkout Page:
+	https://codepen.io/chris1337/pen/gOZbRpo
+	
+Modal :
+
+	https://codepen.io/cristinaconacel/pen/ZmxZzm
+	
+Alert :
+	https://www.tutorialrepublic.com/snippets/preview.php?topic=bootstrap&file=simple-success-confirmation-popup
+	
+
+Bootstrap:
+	class = "container-fluid", "container-large"
+	"col-3 offset-1"
+	"row gy-5"
+	
+// JSON.stringify(objectToBeStringified,null,4)

@@ -1,0 +1,7 @@
+package bmshow.service;
+
+public class BookingService {
+	
+	Map<String,String,Booking> allBookingsMap = new HashMap<>();
+
+}

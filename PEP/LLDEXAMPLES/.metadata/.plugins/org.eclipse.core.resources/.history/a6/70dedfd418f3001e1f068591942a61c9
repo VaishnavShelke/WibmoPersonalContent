@@ -1,0 +1,17 @@
+package bmshow.model;
+
+public class Show {
+
+	String id;
+	Screen screen;
+	Movie movie;
+	Theater theatre;
+	public Show(String id, Screen screen, Movie movie, Theater theatre) {
+		super();
+		this.id = id;
+		this.screen = screen;
+		this.movie = movie;
+		this.theatre = theatre;
+	}
+	
+}

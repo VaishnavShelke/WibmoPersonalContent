@@ -1,0 +1,16 @@
+package bmshow.model;
+
+import java.util.List;
+
+public class Theater {
+
+	String id = null;
+	List<Screen> allScreens = null;
+	Theater(String thid){
+		id = thid;
+	}
+	
+	boolean addScreen(Screen sc) {
+		allScreens.add(sc);
+	}
+}

@@ -1,0 +1,9 @@
+package bmshow.model;
+
+public class Show {
+
+	String id;
+	Screen screen;
+	Movie movie;
+	Theater theatre;
+}

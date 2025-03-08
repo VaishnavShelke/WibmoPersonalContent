@@ -1,0 +1,35 @@
+package bmshow.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import bmshow.model.Show;
+
+public class ShowService {
+
+	List<Show> allShows = new ArrayList<>();
+	
+	
+	void addShow(Show show) throws Exception {
+		if(checkIfShowExists(show)) {
+			throw new Exception("Show already exists");
+		}else {
+			allShows.add(show);
+		}
+	}
+
+	
+	Show fetchShow(String showId) {
+		for(Show sh : allShows) {
+			if(sh.)
+		}
+	}
+	
+	
+
+	private boolean checkIfShowExists(Show show) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}
+

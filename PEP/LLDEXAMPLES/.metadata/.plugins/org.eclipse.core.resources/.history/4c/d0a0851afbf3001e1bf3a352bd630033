@@ -1,0 +1,22 @@
+package elevator.service;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import elevator.model.Direction;
+import elevator.model.ElevatorSystem;
+
+public class ElevatorSystemService {
+
+	private ElevatorSystemService es;
+	Set<Direction> unexecutedInstructions = new HashSet<>();
+	
+	public ElevatorSystemService(ElevatorSystemService es) {
+		this.es = es;
+	}
+	
+	public void takeExternalInstructions(Direction instruction) {
+		for(es.)
+	}
+}
+

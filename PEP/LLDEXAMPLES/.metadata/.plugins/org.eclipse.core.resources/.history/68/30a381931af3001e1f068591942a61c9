@@ -1,0 +1,17 @@
+package bmshow.service;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import bmshow.model.Show;
+
+public class ShowService {
+
+	List<Show> allShows = new ArrayList<>();
+	
+	
+	void addShow(Show) {
+		
+	}
+}
+

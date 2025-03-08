@@ -1,0 +1,11 @@
+package bmshow.model;
+
+
+
+public class Seat {
+	
+	private String id;
+	private String rowNo;
+	private String colNo;
+	
+}

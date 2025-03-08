@@ -1,0 +1,18 @@
+package elevator.service;
+
+import java.util.HashMap;
+
+import elevator.model.ElevatorSystem;
+
+public class ElevatorSystemService {
+
+	HashMap<String,ElevatorSystem> es = null;
+	
+	{
+		es = new HashMap<>();
+	}
+	
+	public static ElevatorSystem addElevatorSystem(String id,ElevatorSystem es) {
+		
+	}
+}

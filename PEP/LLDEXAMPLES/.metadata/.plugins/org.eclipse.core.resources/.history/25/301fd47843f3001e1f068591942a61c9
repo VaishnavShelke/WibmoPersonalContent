@@ -1,0 +1,8 @@
+package bmshow;
+
+import bmshow.service.TheatreService;
+
+public class TestService {
+
+	TheatreService.
+}

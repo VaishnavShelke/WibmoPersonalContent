@@ -1,0 +1,20 @@
+package elevator.model;
+
+import java.util.LinkedList;
+
+public class ElevatorCar {
+	private String id;
+	private boolean isActive = false;
+	private Integer currentFloor;
+	private LinkedList<Direction> instruction=null;
+	private Integer maxFloor;
+	private Integer minFloor;
+	
+	
+	public ElevatorCar(String id,Integer maxFloor,Integer minFloor) {
+		this.id = id;
+		this.maxFloor = maxFloor;
+		this.minFloor = minFloor;
+		
+	}
+}

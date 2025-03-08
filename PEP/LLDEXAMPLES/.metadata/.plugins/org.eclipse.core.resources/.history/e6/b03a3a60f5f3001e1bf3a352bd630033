@@ -1,0 +1,25 @@
+package elevator.service;
+
+import java.util.HashMap;
+
+import elevator.model.Direction;
+import elevator.model.ElevatorSystem;
+
+public class ElevatorSystemService {
+
+	private static HashMap<String,ElevatorSystem> allElevatorSystem = null;
+	
+	{
+		allElevatorSystem = new HashMap<>();
+	}
+	
+	public static void addElevatorSystem(String id,ElevatorSystem es) {
+		allElevatorSystem.put(id,es);
+	}
+	
+	public static void externalCommand(String esId,Direction instruction) {
+		ElevatorSystem es = allElevatorSystem.get(esId);
+		
+		
+	}
+}

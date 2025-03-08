@@ -1,0 +1,23 @@
+package bmshow.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import bmshow.model.Show;
+
+public class ShowService {
+
+	static Map<String,Show> allShows = new HashMap<>();
+	
+	
+	public static List<Show> getAllShowsForMovie(String movieId){
+		List<Show> showList = new ArrayList<>();
+		for(Map.Entry<String, Show> ety : allShows.entrySet()) {
+			if(ety.getValue().getId() == movieId) {
+				showList.add(ety.getValue());
+			}
+		}
+	}
+}

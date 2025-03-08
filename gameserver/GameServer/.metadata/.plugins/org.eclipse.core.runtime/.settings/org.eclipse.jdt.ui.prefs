@@ -1,0 +1,12 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="com.game.inventory.beans.PlayerInfoBean"><rhs name\="com.game.inventory.beans.PlayerInfoBean"/></lhs><lhs name\="com.game.inventory.beans.InventoryInfoBean"><rhs name\="com.game.inventory.beans.InventoryInfoBean"/></lhs><lhs name\="com.game.inventory.beans.CommonTransDTOFields"><rhs name\="com.game.inventory.beans.CreateTokenRequest"/></lhs><lhs name\="com.game.inventory.beans.CommonDTOFields"><rhs name\="com.game.inventory.beans.CreateTokenRequest"/><rhs name\="com.game.inventory.beans.TransferTokenEventResponse"/></lhs><lhs name\="com.game.inventory.beans.CreateTokenRequest"><rhs name\="com.game.inventory.beans.CreateTokenRequest"/></lhs><lhs name\="com.game.inventory.beans.ItemInfoBean"><rhs name\="com.game.inventory.beans.ItemInfoBean"/></lhs><lhs name\="com.game.inventory.beans.TokenmintIssueTransactionBean"><rhs name\="com.game.inventory.beans.TokenmintIssueTransactionBean"/></lhs><lhs name\="com.game.inventory.beans.TransferTokenEventResponse"><rhs name\="com.game.inventory.beans.TransferTokenEventResponse"/></lhs><lhs name\="com.game.inventory.beans.PlayerCredentialsBean"><rhs name\="com.game.inventory.beans.PlayerCredentialsBean"/></lhs><lhs name\="java.lang.Enum"><rhs name\="com.game.inventory.utility.Constants$ManageItems"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="com.game.inventory.utility.Constants$ManageItems"/></lhs><lhs name\="com.game.inventory.utility.Constants$ManageItems"><rhs name\="com.game.inventory.utility.Constants$ManageItems"/></lhs></history>
+content_assist_number_of_computers=15
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

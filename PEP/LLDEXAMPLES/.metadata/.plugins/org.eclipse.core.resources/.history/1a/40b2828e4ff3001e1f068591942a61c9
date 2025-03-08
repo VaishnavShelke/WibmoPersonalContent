@@ -1,0 +1,18 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import bmshow.model.Screen;
+import bmshow.model.Seat;
+
+public class SeatService {
+
+	
+	public static addSeatsToScreen(Screen sc,List<Seats> seats) {
+		for(Seat seat : seats) {
+			
+		}
+	}
+}

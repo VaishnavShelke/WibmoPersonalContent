@@ -1,0 +1,23 @@
+package elevator.service;
+
+import java.util.LinkedList;
+
+import elevator.model.Direction;
+import elevator.model.ElevatorCar;
+
+public class ElevatorCarService {
+	private ElevatorCar ev;
+	private LinkedList<Direction> instruction=null;
+	
+	public ElevatorCarService(ElevatorCar ev) {
+		this.ev = ev;
+	}
+	
+	private void takeInternalCommand(Direction instruction) {
+		
+	}
+	
+	private void takeExternalCommand(Direction istruction) {
+		
+	}
+}

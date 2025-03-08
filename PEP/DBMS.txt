@@ -1,0 +1,29 @@
+
+TABLE.PROCEDURE.TRIGGER.FUNCTION.INDEX
+INDEX Vs PRIMARY key
+TRUNCATE Vs DELETE
+VIEW provides encapsulation and abstraction // CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+											// GRANT SELECT ON your_database_name.employees TO 'username'@'localhost';
+											// CREATE ROLE hr_role;
+											// GRANT SELECT ON your_database_name.employees TO hr_role;
+Data Abstraction :: View Level , Conceptual Level , Physical Level
+Referential Integrity :  To allow join, the referential integrity rule states that the Primary Key and Foreign Key have same data types. 
+Foreign keys exists only for referential integrity, Join can happen anyways
+ CASCADE DELETE or CASCADE UPDATE
+ M:M relationship requires a join table
+ A foreing key should be mapped to unique index /primary key in another {Parent } table
+ 
+Different Types of Database Keys,Candidate Key,Primary Key,Super Key,Alternate Key,Foreign Key,Composite Key
+Primary keys are not necessarily to be a single column; more than one column can also be a primary key for a table.
+
+Type of joins
+Clustered Vs Non-Clustered Index - Remember that adding indexes can impact the performance of data modification operations (such as INSERT, UPDATE, DELETE), so it's essential to evaluate the trade-offs and consider the indexing strategy carefully based on your application's requirements and workload.
+Sparse Vs Dense Indexing
+BTree
+
+Normalisation of Database
+1NF (First Normal Form)
+2NF (First Normal Form)
+3NF (First Normal Form) BCNF (Boyce-Codd Normal Form): 4NF (Fourth Normal Form) 5NF (Fourth Normal Form) 6NF (Fourth Normal Form)
+
+											

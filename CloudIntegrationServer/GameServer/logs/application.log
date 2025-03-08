@@ -1,0 +1,169 @@
+14:43:05.511 [main] INFO  c.g.inventory.GameserverApplication - Starting GameserverApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 18696 (D:\PP\CloudIntegrationServer\GameServer\gameserver-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\GameServer)
+14:43:05.511 [main] INFO  c.g.inventory.GameserverApplication - No active profile set, falling back to 1 default profile: "default"
+14:43:06.097 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:43:06.131 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 0 JPA repository interfaces.
+14:43:06.713 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9001 (http)
+14:43:06.713 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+14:43:06.729 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:43:06.730 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+14:43:06.832 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:43:06.832 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1261 ms
+14:43:06.982 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:43:07.154 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@525d79f0
+14:43:07.154 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:43:07.186 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:43:07.233 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.9.Final
+14:43:07.233 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+14:43:07.375 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+14:43:07.549 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:43:07.697 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+14:43:07.854 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:43:07.854 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:43:07.870 [main] INFO  c.g.inventory.service.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+14:43:07.934 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:43:08.347 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+14:43:08.363 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9001 (http) with context path ''
+14:43:08.426 [main] INFO  c.g.inventory.GameserverApplication - Started GameserverApplication in 3.36 seconds (process running for 4.12)
+14:43:24.542 [http-nio-9001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:43:24.542 [http-nio-9001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:43:24.545 [http-nio-9001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+14:57:23.959 [main] INFO  c.g.inventory.GameserverApplication - Starting GameserverApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 20256 (D:\PP\CloudIntegrationServer\GameServer\gameserver-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\GameServer)
+14:57:23.963 [main] INFO  c.g.inventory.GameserverApplication - No active profile set, falling back to 1 default profile: "default"
+14:57:24.543 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:57:24.574 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+14:57:25.081 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9001 (http)
+14:57:25.081 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+14:57:25.081 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:57:25.081 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+14:57:25.159 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:57:25.159 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1132 ms
+14:57:25.300 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:57:25.848 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7646731d
+14:57:25.848 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:57:25.895 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:57:25.926 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.9.Final
+14:57:25.926 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+14:57:26.046 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+14:57:26.146 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+14:57:26.335 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+14:57:26.491 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:57:26.491 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:57:26.522 [main] INFO  c.g.inventory.service.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+14:57:26.607 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:57:26.981 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+14:57:26.997 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9001 (http) with context path ''
+14:57:27.013 [main] INFO  c.g.inventory.GameserverApplication - Started GameserverApplication in 3.505 seconds (process running for 3.922)
+14:58:16.686 [http-nio-9001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:58:16.686 [http-nio-9001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:58:16.686 [http-nio-9001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+14:58:21.909 [http-nio-9001-exec-2] INFO  c.g.i.c.LoginLogoutController - Username :: knfjdnfjd, Password :: nsjfndjfnj
+14:58:21.909 [http-nio-9001-exec-2] INFO  c.g.i.service.LoginSignupHandler - Session does not contains PLAYER ID :: null
+14:58:22.026 [http-nio-9001-exec-2] INFO  c.g.i.dao.PlayerCredentialsDAO - Player Credentials Not Found, Onboardning New Player knfjdnfjd
+14:58:22.042 [http-nio-9001-exec-2] INFO  c.g.i.dao.PlayerCredentialsDAO - player_credentials saved sucessfullly to table player_info 
+14:58:22.042 [http-nio-9001-exec-2] INFO  c.game.inventory.dao.PlayerInfoDAO - Player Credentials PlayerCredentialsBean(playerName=knfjdnfjd, playerPassword=nsjfndjfnj, playerId=20231027145822026)
+14:58:22.184 [http-nio-9001-exec-2] INFO  c.game.inventory.dao.PlayerInfoDAO - Player Info saved sucessfullly to table player_info 
+14:58:22.366 [http-nio-9001-exec-2] INFO  c.g.i.service.LoginSignupHandler - Player Info From DB :: PlayerInfoJson(playerName=knfjdnfjd, playerId=20231027145822026, items={1001_10001=InventoryInfoBean(itemQuantity=2, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10004=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10005=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10002=InventoryInfoBean(itemQuantity=3, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10003=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10006=InventoryInfoBean(itemQuantity=1, chainId=null, recipientAddress=null, itemStatus=ON_CHAIN, transactionRecieptUrl=null), 1001_10007=InventoryInfoBean(itemQuantity=2, chainId=null, recipientAddress=null, itemStatus=ON_CHAIN, transactionRecieptUrl=null)})
+14:58:24.908 [http-nio-9001-exec-3] INFO  c.g.i.c.ItemManagementController - itemId :: 1001_10001, itemQuantity :: 2
+14:58:26.342 [http-nio-9001-exec-4] INFO  c.g.i.c.ItemManagementController - itemId :: 1001_10001,iteQuantity :: 2,otp :: 360903
+14:58:26.343 [http-nio-9001-exec-4] INFO  c.g.i.c.ItemManagementController - Player Id in Session 20231027145822026
+14:58:26.425 [http-nio-9001-exec-4] INFO  c.g.i.c.ItemManagementController - Player Info From Session Object :: PlayerInfoEty(playerName=knfjdnfjd, playerId=20231027145822026, playerInfo={"playerName":"knfjdnfjd","playerId":"20231027145822026","items":{"1001_10001":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10004":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10005":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10002":{"itemQuantity":"3","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10003":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10006":{"itemQuantity":"1","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null},"1001_10007":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null}}})
+14:58:26.466 [http-nio-9001-exec-4] INFO  c.g.i.s.TokenMintInterfaceHandler - Create Token Request :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027145826425","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"knfjdnfjd","playerId":"20231027145822026","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"http://localhost:9001/battlegrounds/landingPage/20231027145826425","otp":"360903"}
+14:58:26.475 [http-nio-9001-exec-4] INFO  c.g.i.service.HttpConnectService - **** Sending request to http://localhost:1001/tokenmint/createtoken/1001
+14:58:26.475 [http-nio-9001-exec-4] INFO  c.g.i.service.HttpConnectService - **** Payload :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027145826425","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"knfjdnfjd","playerId":"20231027145822026","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"http://localhost:9001/battlegrounds/landingPage/20231027145826425","otp":"360903"}
+14:58:26.867 [http-nio-9001-exec-4] ERROR c.g.i.service.HttpConnectService - !!!!! Error in sending request Connect to localhost:1001 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+14:58:26.868 [http-nio-9001-exec-4] INFO  c.g.i.service.HttpConnectService - **** Response :: null
+14:58:26.868 [http-nio-9001-exec-4] ERROR com.game.inventory.utility.Utility - String to Object Conversion Failed for class : class com.game.inventory.beans.CreateTokenResponse argument "content" is null
+14:58:26.868 [http-nio-9001-exec-4] ERROR c.g.i.s.TokenMintInterfaceHandler - Error Response From TokenMintRequest :: null
+15:00:15.924 [main] INFO  c.g.inventory.GameserverApplication - Starting GameserverApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 12052 (D:\PP\CloudIntegrationServer\GameServer\gameserver-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\GameServer)
+15:00:15.924 [main] INFO  c.g.inventory.GameserverApplication - No active profile set, falling back to 1 default profile: "default"
+15:00:16.479 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:00:16.500 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+15:00:17.139 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9001 (http)
+15:00:17.139 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+15:00:17.154 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:00:17.154 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:00:17.219 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:00:17.219 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1235 ms
+15:00:17.345 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:00:17.889 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5707c1cb
+15:00:17.892 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:00:17.928 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:00:17.966 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.9.Final
+15:00:17.969 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:00:18.083 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:00:18.204 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:00:18.390 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:00:18.555 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:00:18.555 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:00:18.575 [main] INFO  c.g.inventory.service.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:00:18.635 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:00:19.037 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+15:00:19.058 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9001 (http) with context path ''
+15:00:19.071 [main] INFO  c.g.inventory.GameserverApplication - Started GameserverApplication in 3.603 seconds (process running for 4.063)
+15:00:28.792 [http-nio-9001-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:00:28.792 [http-nio-9001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:00:28.803 [http-nio-9001-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+15:00:36.405 [http-nio-9001-exec-4] INFO  c.g.i.c.LoginLogoutController - Username :: mds ms d, Password :: sd nn snc s
+15:00:36.405 [http-nio-9001-exec-4] INFO  c.g.i.service.LoginSignupHandler - Session does not contains PLAYER ID :: null
+15:00:36.554 [http-nio-9001-exec-4] INFO  c.g.i.dao.PlayerCredentialsDAO - Player Credentials Not Found, Onboardning New Player mds ms d
+15:00:36.621 [http-nio-9001-exec-4] INFO  c.g.i.dao.PlayerCredentialsDAO - player_credentials saved sucessfullly to table player_info 
+15:00:36.621 [http-nio-9001-exec-4] INFO  c.game.inventory.dao.PlayerInfoDAO - Player Credentials PlayerCredentialsBean(playerName=mds ms d, playerPassword=sd nn snc s, playerId=20231027150036554)
+15:00:36.832 [http-nio-9001-exec-4] INFO  c.game.inventory.dao.PlayerInfoDAO - Player Info saved sucessfullly to table player_info 
+15:00:37.271 [http-nio-9001-exec-4] INFO  c.g.i.service.LoginSignupHandler - Player Info From DB :: PlayerInfoJson(playerName=mds ms d, playerId=20231027150036554, items={1001_10001=InventoryInfoBean(itemQuantity=2, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10004=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10005=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10002=InventoryInfoBean(itemQuantity=3, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10003=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10006=InventoryInfoBean(itemQuantity=1, chainId=null, recipientAddress=null, itemStatus=ON_CHAIN, transactionRecieptUrl=null), 1001_10007=InventoryInfoBean(itemQuantity=2, chainId=null, recipientAddress=null, itemStatus=ON_CHAIN, transactionRecieptUrl=null)})
+15:00:38.531 [http-nio-9001-exec-3] INFO  c.g.i.c.ItemManagementController - itemId :: 1001_10001, itemQuantity :: 2
+15:00:39.936 [http-nio-9001-exec-1] INFO  c.g.i.c.ItemManagementController - itemId :: 1001_10001,iteQuantity :: 2,otp :: 394377
+15:00:39.937 [http-nio-9001-exec-1] INFO  c.g.i.c.ItemManagementController - Player Id in Session 20231027150036554
+15:00:40.080 [http-nio-9001-exec-1] INFO  c.g.i.c.ItemManagementController - Player Info From Session Object :: PlayerInfoEty(playerName=mds ms d, playerId=20231027150036554, playerInfo={"playerName":"mds ms d","playerId":"20231027150036554","items":{"1001_10001":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10004":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10005":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10002":{"itemQuantity":"3","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10003":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10006":{"itemQuantity":"1","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null},"1001_10007":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null}}})
+15:00:40.150 [http-nio-9001-exec-1] INFO  c.g.i.s.TokenMintInterfaceHandler - Create Token Request :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027150040080","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"mds ms d","playerId":"20231027150036554","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"http://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:9001/battlegrounds/landingPage/20231027150040080","otp":"394377"}
+15:00:40.153 [http-nio-9001-exec-1] INFO  c.g.i.service.HttpConnectService - **** Sending request to http://localhost:1001/tokenmint/createtoken/1001
+15:00:40.153 [http-nio-9001-exec-1] INFO  c.g.i.service.HttpConnectService - **** Payload :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027150040080","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"mds ms d","playerId":"20231027150036554","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"http://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:9001/battlegrounds/landingPage/20231027150040080","otp":"394377"}
+15:00:40.416 [http-nio-9001-exec-1] ERROR c.g.i.service.HttpConnectService - !!!!! Error in sending request Connect to localhost:1001 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+15:00:40.416 [http-nio-9001-exec-1] INFO  c.g.i.service.HttpConnectService - **** Response :: null
+15:00:40.416 [http-nio-9001-exec-1] ERROR com.game.inventory.utility.Utility - String to Object Conversion Failed for class : class com.game.inventory.beans.CreateTokenResponse argument "content" is null
+15:00:40.416 [http-nio-9001-exec-1] ERROR c.g.i.s.TokenMintInterfaceHandler - Error Response From TokenMintRequest :: null
+15:03:30.289 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:03:30.289 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:03:30.308 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:03:36.819 [main] INFO  c.g.inventory.GameserverApplication - Starting GameserverApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 4472 (D:\PP\CloudIntegrationServer\GameServer\gameserver-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\GameServer)
+15:03:36.821 [main] INFO  c.g.inventory.GameserverApplication - No active profile set, falling back to 1 default profile: "default"
+15:03:37.427 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:03:37.443 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+15:03:37.998 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9001 (http)
+15:03:38.014 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+15:03:38.014 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:03:38.014 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.13]
+15:03:38.094 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:03:38.094 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1220 ms
+15:03:38.269 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:03:39.228 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72efb5c1
+15:03:39.230 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:03:39.256 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:03:39.306 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.9.Final
+15:03:39.306 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:03:39.422 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:03:39.545 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:03:39.790 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:03:39.950 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:03:39.954 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:03:39.960 [main] INFO  c.g.inventory.service.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:03:40.022 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:03:40.550 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+15:03:40.577 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9001 (http) with context path ''
+15:03:40.608 [main] INFO  c.g.inventory.GameserverApplication - Started GameserverApplication in 4.242 seconds (process running for 4.642)
+15:03:48.541 [http-nio-9001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:03:48.541 [http-nio-9001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:03:48.541 [http-nio-9001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+15:03:53.339 [http-nio-9001-exec-2] INFO  c.g.i.c.LoginLogoutController - Username :: fdmfkjff, Password :: jndkjvs vf
+15:03:53.339 [http-nio-9001-exec-2] INFO  c.g.i.service.LoginSignupHandler - Session does not contains PLAYER ID :: null
+15:03:53.407 [http-nio-9001-exec-2] INFO  c.g.i.dao.PlayerCredentialsDAO - Player Credentials Not Found, Onboardning New Player fdmfkjff
+15:03:53.420 [http-nio-9001-exec-2] INFO  c.g.i.dao.PlayerCredentialsDAO - player_credentials saved sucessfullly to table player_info 
+15:03:53.420 [http-nio-9001-exec-2] INFO  c.game.inventory.dao.PlayerInfoDAO - Player Credentials PlayerCredentialsBean(playerName=fdmfkjff, playerPassword=jndkjvs vf, playerId=20231027150353408)
+15:03:53.521 [http-nio-9001-exec-2] INFO  c.game.inventory.dao.PlayerInfoDAO - Player Info saved sucessfullly to table player_info 
+15:03:53.704 [http-nio-9001-exec-2] INFO  c.g.i.service.LoginSignupHandler - Player Info From DB :: PlayerInfoJson(playerName=fdmfkjff, playerId=20231027150353408, items={1001_10001=InventoryInfoBean(itemQuantity=2, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10004=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10005=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10002=InventoryInfoBean(itemQuantity=3, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10003=InventoryInfoBean(itemQuantity=4, chainId=null, recipientAddress=null, itemStatus=OFF_CHAIN, transactionRecieptUrl=null), 1001_10006=InventoryInfoBean(itemQuantity=1, chainId=null, recipientAddress=null, itemStatus=ON_CHAIN, transactionRecieptUrl=null), 1001_10007=InventoryInfoBean(itemQuantity=2, chainId=null, recipientAddress=null, itemStatus=ON_CHAIN, transactionRecieptUrl=null)})
+15:03:56.040 [http-nio-9001-exec-5] INFO  c.g.i.c.ItemManagementController - itemId :: 1001_10001, itemQuantity :: 2
+15:03:57.787 [http-nio-9001-exec-6] INFO  c.g.i.c.ItemManagementController - itemId :: 1001_10001,iteQuantity :: 2,otp :: 992838
+15:03:57.787 [http-nio-9001-exec-6] INFO  c.g.i.c.ItemManagementController - Player Id in Session 20231027150353408
+15:03:57.874 [http-nio-9001-exec-6] INFO  c.g.i.c.ItemManagementController - Player Info From Session Object :: PlayerInfoEty(playerName=fdmfkjff, playerId=20231027150353408, playerInfo={"playerName":"fdmfkjff","playerId":"20231027150353408","items":{"1001_10001":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10004":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10005":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10002":{"itemQuantity":"3","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10003":{"itemQuantity":"4","chainId":null,"recipientAddress":null,"itemStatus":"OFF_CHAIN","transactionRecieptUrl":null},"1001_10006":{"itemQuantity":"1","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null},"1001_10007":{"itemQuantity":"2","chainId":null,"recipientAddress":null,"itemStatus":"ON_CHAIN","transactionRecieptUrl":null}}})
+15:03:57.903 [http-nio-9001-exec-6] INFO  c.g.i.s.TokenMintInterfaceHandler - Create Token Request :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027150357874","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"fdmfkjff","playerId":"20231027150353408","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"https://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:9001/battlegrounds/landingPage/20231027150357874","otp":"992838"}
+15:03:57.903 [http-nio-9001-exec-6] INFO  c.g.i.service.HttpConnectService - **** Sending request to https://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:1001/tokenmint/createtoken/1001
+15:03:57.903 [http-nio-9001-exec-6] INFO  c.g.i.service.HttpConnectService - **** Payload :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"20231027150357874","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null,"chainId":null,"recipientAddress":null,"itemIndex":0,"itemStatus":null,"transactionRecieptUrl":null},"playerInfo":{"playerName":"fdmfkjff","playerId":"20231027150353408","playerInfo":null},"registeredEthAddress":null,"gameLandingPage":"https://ec2-15-207-222-151.ap-south-1.compute.amazonaws.com:9001/battlegrounds/landingPage/20231027150357874","otp":"992838"}

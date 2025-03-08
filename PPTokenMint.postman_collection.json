@@ -1,0 +1,205 @@
+{
+	"info": {
+		"_postman_id": "dddf9dbe-b81d-411b-bd52-1e2200e1edfb",
+		"name": "PP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22544256",
+		"_collection_link": "https://gold-star-873323.postman.co/workspace/New-Team-Workspace~6f623c9b-ffed-4275-b5f0-df88513ad8f8/collection/22544256-dddf9dbe-b81d-411b-bd52-1e2200e1edfb?action=share&source=collection_link&creator=22544256"
+	},
+	"item": [
+		{
+			"name": "CreateToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"gameId\" : \"1001\",\r\n    \"ethContractId\" : \"1001_50001\",\r\n    \"gameTransactionId\" : \"2bd5f684-3bf7-49a0-b781-b2d3d933ad60\",\r\n    \"gameLandingPage\" : \"https://google.com\",\r\n    \"otp\" : \"446601\",\r\n    \"gameItemInfo\" : \r\n    {\r\n        \"itemId\" : \"1001_10001\",\r\n        \"itemPrice\" : null,\r\n        \"itemCategory\" : \"GEAR\",\r\n        \"itemQuantity\" : \"2\"\r\n    },\r\n    \"playerInfo\" :\r\n    {\r\n        \"playerId\" : \"20230801115743465\",\r\n        \"playerName\" : \"BestHuman_012\",\r\n        \"tokenMintUserId\" : \"\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/tokenmint/createtoken/1001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"tokenmint",
+						"createtoken",
+						"1001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoadUI",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"tokenMintTransactionId\": \"20231012233234148\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/tokenmint/server/load-ui/20231012233234148",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"tokenmint",
+						"server",
+						"load-ui",
+						"20231012233234148"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAddressFromSignature",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"123457\",\r\n    \"signedMessage\": \"0xb41b9d585b93cf1b923c45f3741a8e39e928c164f28512cd298e86fd14f95aed61237c841eeb69a4a6568a3800c36d3e21039c8b953d850ef8ddc72608a3e9ff1b\",\r\n    \"address\":\"0x5BDf727dfb62E4fF4d185d344E25837bC5C95Bd3\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2001/utility/verifyAddress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"utility",
+						"verifyAddress"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyAddress",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tokenMintTransactionId\" : \"c2a1463b-14c4-4bbe-ad44-0ddc26229857\",\r\n    \"signedMessage\" : \"0xb41b9d585b93cf1b923c45f3741a8e39e928c164f28512cd298e86fd14f95aed61237c841eeb69a4a6568a3800c36d3e21039c8b953d850ef8ddc72608a3e9ff1b\",\r\n    \"address\" : \"0xF51FE9b283FBf0CB27C8664c18bE1eA78363CD04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/tokenmint/server/verify-address/c2a1463b-14c4-4bbe-ad44-0ddc26229857",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"tokenmint",
+						"server",
+						"verify-address",
+						"c2a1463b-14c4-4bbe-ad44-0ddc26229857"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NODE SERVER TransferTokens",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"providerId\" : \"11155111_001\",\r\n  \"tokenMintTransactionId\": \"20231005185221184\",\r\n  \"contractId\": \"1001_50001\",\r\n  \"contractName\": \"Pubg Inventory Zero One\",\r\n  \"contractAddress\": \"0x184a20faD1487B68E951f3094eE44fda9bf929b3\",\r\n  \"contractChainId\": \"5\",\r\n  \"contractABI\": \"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json\",\r\n  \"contractOperatorAddress\": \"0x1783913E8aE51f2883D1be5307b95C7805218815\",\r\n  \"web3ContractArguments\": {\r\n    \"from\": \"0x1783913E8aE51f2883D1be5307b95C7805218815\",\r\n    \"to\": \"0xe1b862C5E887F8F04B6991Ad3cD7470c6D2D93E6\",\r\n    \"id\": \"1\",\r\n    \"value\": \"2\",\r\n    \"data\": \"0x47dffdf583a240\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2001/web-3-gateway/tokenmint/transferTokensFromGame",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"web-3-gateway",
+						"tokenmint",
+						"transferTokensFromGame"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TransferEventListener",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"tokenMintTransactionId\" : \"ecc7b2e6-a2d0-4e83-a8a4-cb09b9da9c58\",\r\n\t\"operator\" : \"0x1783913E8aE51f2883D1be5307b95C7805218815\",\r\n\t\"from\" : \"0x1783913E8aE51f2883D1be5307b95C7805218815\",\r\n\t\"to\" : \"0xe1b862C5E887F8F04B6991Ad3cD7470c6D2D93E6\",\r\n\t\"id\" : \"1\",\r\n\t\"value\" : \"2\",\r\n\t\"transactionReciept\" : {\r\n\t\t\"blockNumber\" : \"334455\",\r\n\t\t\"transactionHash\" : \"0x738907634960550a238fccbfda48177af098f5721599a97511b0b6cee46c79b0\"\r\n\t}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1001/tokenmint/server/internal/eventlistener/transferevent",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1001",
+					"path": [
+						"tokenmint",
+						"server",
+						"internal",
+						"eventlistener",
+						"transferevent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GameTransferEventListener",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		}
+	]
+}

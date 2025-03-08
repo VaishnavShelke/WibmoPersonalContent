@@ -1,0 +1,28 @@
+package bmshow.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Theater {
+
+	String id = null;
+	String name = null;
+	List<Screen> allScreens = null;
+	Theater(String thid,String thname){
+		id = thid;
+		name = thname;
+		allScreens = new ArrayList<>();
+	}
+	
+	void addScreen(Screen sc) throws Exception {
+		if(checkIfScreenExists(sc)) {
+			throw new Exception("Screen Already Exists");
+		}else {
+			allScreens.add(sc);
+		}
+	}
+
+	private boolean checkIfScreenExists(Screen sc) {
+		return false;
+	}
+}

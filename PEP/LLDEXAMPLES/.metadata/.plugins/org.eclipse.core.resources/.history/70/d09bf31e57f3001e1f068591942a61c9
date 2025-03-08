@@ -1,0 +1,33 @@
+package bmshow;
+
+import java.util.Arrays;
+
+import bmshow.model.Movie;
+import bmshow.model.Screen;
+import bmshow.model.Seat;
+import bmshow.model.Theater;
+import bmshow.service.MovieService;
+import bmshow.service.ScreenService;
+import bmshow.service.SeatService;
+import bmshow.service.ShowService;
+import bmshow.service.TheatreService;
+
+public class TestService {
+
+	public static void main(String[] args) {
+		try {
+			Theater th1 = TheatreService.createTheater("PVR Thanisandra");
+			Theater th2 = TheatreService.createTheater("INOX Lido");
+			
+			Screen sc11 = ScreenService.createScreen(th1, "Floor 1 2");
+			SeatService.addSeatsToScreen(sc11, Arrays.asList(new Seat("F25", "F", "25"),new Seat("G05", "G", "05"),new Seat("K25", "K", "25")));
+			
+			Movie mv = MovieService.createMovie("Finding Nemo");
+			ShowService.createShow(th1, sc11,mv , System.currentTimeMillis());
+			System.out.println(TheatreService.getAllTheaters());
+		}catch (Exception e) {
+			System.out.println("Exception + :: "+ e.getMessage());
+		}
+		
+	}
+}

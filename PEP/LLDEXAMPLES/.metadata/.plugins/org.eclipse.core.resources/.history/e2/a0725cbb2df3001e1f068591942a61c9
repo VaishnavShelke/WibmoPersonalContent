@@ -1,0 +1,19 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import bmshow.model.Screen;
+
+public class ScreenService {
+	
+	static Map<String,Screen> allScreenMap = new HashMap<>();
+
+	public static Screen createScreen(String scid) {
+		Screen newScreen = new Screen();
+		return null;
+	}
+	
+	Screen 
+
+}

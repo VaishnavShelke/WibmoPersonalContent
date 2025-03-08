@@ -1,0 +1,61 @@
+package elevator.service;
+
+import java.util.LinkedList;
+import java.util.TreeSet;
+
+import elevator.model.Direction;
+import elevator.model.DirectionsEnum;
+import elevator.model.ElevatorCar;
+
+public class ElevatorCarService {
+	private ElevatorCar ev;
+	private TreeSet<Direction> instructionList=null;
+	
+	public ElevatorCarService(ElevatorCar ev) {
+		this.ev = ev;
+		instructionList = new TreeSet<>((a,b)-> a.getFloor()-b.getFloor());
+	}
+	
+	private void takeInternalCommand(Direction instruction) throws Exception {
+		if(ev.getcurrentState().getDir() == DirectionsEnum.UP) {
+			if(ev.getcurrentState().getFloor() > instruction.getFloor()) {
+				throw new Exception("Can Only Move Up");
+			}else {
+				instructionList.add(instruction);
+			}
+		}else if(ev.getcurrentState().getDir() == DirectionsEnum.DOWN ){
+			if(ev.getcurrentState().getFloor() > instruction.getFloor()) {
+				instructionList.add(instruction);
+			}
+		}else {
+			instructionList.add(instruction);
+		}
+	}
+	
+	private void takeExternalCommand(Direction instruction) throws Exception{
+		Direction carstate = ev.getcurrentState();
+		if(carstate.getDir() == DirectionsEnum.UP) {
+			if(instruction.getDir() == DirectionsEnum.UP) {
+				if(instruction.getFloor() >= carstate.getFloor()) {
+					instructionList.add(instruction);
+				}else {
+					throw new Exception("Car Has Passed Above");
+				}
+			}else {
+				throw new Exception("Car Going Above Not Below");
+			}
+		}else if(carstate.getDir() == DirectionsEnum.DOWN) {
+			if(instruction.getDir() == DirectionsEnum.DOWN) {
+				if(instruction.getFloor() <= carstate.getFloor()) {
+					instructionList.add(instruction);
+				}else {
+					throw new Exception("Car has passed below");
+				}
+			}else {
+				throw new Exception("Car is goinb below not above");
+			}
+		}else {
+			
+		}
+	}
+}

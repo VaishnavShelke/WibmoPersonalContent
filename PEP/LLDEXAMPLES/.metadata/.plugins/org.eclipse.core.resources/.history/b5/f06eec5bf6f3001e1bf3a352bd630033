@@ -1,0 +1,16 @@
+package elevator.service;
+
+import elevator.model.Direction;
+import elevator.model.ElevatorCar;
+
+public class ElevatorCarService {
+	private ElevatorCar ev;
+	
+	public ElevatorCarService(ElevatorCar ev) {
+		this.ev = ev;
+	}
+	
+	private void takeInternalCommand(Direction instruction) {
+		
+	}
+}

@@ -1,0 +1,29 @@
+package elevator.service;
+
+import java.util.LinkedList;
+
+import elevator.model.Direction;
+import elevator.model.DirectionsEnum;
+import elevator.model.ElevatorCar;
+
+public class ElevatorCarService {
+	private ElevatorCar ev;
+	private LinkedList<Direction> instructionList=null;
+	
+	public ElevatorCarService(ElevatorCar ev) {
+		this.ev = ev;
+		instructionList = new LinkedList<>();
+	}
+	
+	private void takeInternalCommand(Direction instruction) {
+		if(instruction.getDir() == DirectionsEnum.UP) {
+			if(instructionList)
+		}else if(instruction.getDir() == DirectionsEnum.DOWN){
+			
+		}
+	}
+	
+	private void takeExternalCommand(Direction istruction) {
+		
+	}
+}

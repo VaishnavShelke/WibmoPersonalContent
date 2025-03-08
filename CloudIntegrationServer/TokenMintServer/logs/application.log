@@ -1,0 +1,760 @@
+11:38:46.042 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 12688 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+11:38:46.049 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+11:38:46.656 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+11:38:46.670 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:38:46.686 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+11:38:46.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+11:38:46.702 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:38:46.718 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+11:38:47.320 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1001 (http)
+11:38:47.320 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1001"]
+11:38:47.336 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:38:47.336 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+11:38:47.416 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:38:47.416 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1307 ms
+11:38:47.543 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:39:09.793 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:160)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:118)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:332)
+	at org.springframework.boot.jdbc.EmbeddedDatabaseConnection.isEmbedded(EmbeddedDatabaseConnection.java:168)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateDefaultDdlAutoProvider.getDefaultDdlAuto(HibernateDefaultDdlAutoProvider.java:42)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.lambda$getVendorProperties$1(HibernateJpaConfiguration.java:142)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings.getDdlAuto(HibernateSettings.java:41)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineDdlAuto(HibernateProperties.java:118)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.getAdditionalProperties(HibernateProperties.java:87)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateProperties.determineHibernateProperties(HibernateProperties.java:80)
+	at org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaConfiguration.getVendorProperties(HibernateJpaConfiguration.java:143)
+	at org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration.entityManagerFactory(JpaBaseConfiguration.java:131)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:139)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:655)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:647)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1332)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1162)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:560)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.monolith.MonolithApplication.main(MonolithApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 52 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 55 common frames omitted
+11:39:09.847 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:39:09.915 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+11:39:09.917 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+11:39:10.095 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+11:39:10.357 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:39:10.383 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:39:32.453 [main] ERROR com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Exception during pool initialization.
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.monolith.MonolithApplication.main(MonolithApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 56 common frames omitted
+11:39:32.453 [main] WARN  o.h.e.j.e.i.JdbcEnvironmentInitiator - HHH000342: Could not obtain connection to query metadata
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:175)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:825)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:446)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:239)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:188)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:561)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:100)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:122)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:316)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:152)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.monolith.MonolithApplication.main(MonolithApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:62)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:150)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:166)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:89)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:121)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:945)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815)
+	... 53 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:546)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:594)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:633)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:153)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:63)
+	... 56 common frames omitted
+11:39:32.453 [main] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+11:39:32.453 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+11:39:32.465 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+11:39:32.480 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+11:39:32.501 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1155)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:932)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.monolith.MonolithApplication.main(MonolithApplication.java:10)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:277)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:239)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:216)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:230)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:198)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:166)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1380)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1451)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:75)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1817)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1766)
+	... 22 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:188)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:87)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:274)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:34)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:264)
+	... 37 common frames omitted
+11:59:29.480 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 21440 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+11:59:29.481 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+11:59:30.170 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+11:59:30.170 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:59:30.202 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+11:59:30.216 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+11:59:30.216 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+11:59:30.232 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+11:59:30.907 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1001 (http)
+11:59:30.907 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1001"]
+11:59:30.907 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:59:30.907 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+11:59:31.017 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:59:31.017 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1461 ms
+11:59:31.186 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:59:35.895 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f0628de
+11:59:35.895 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:59:35.951 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:59:35.999 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+11:59:36.014 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+11:59:36.125 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+11:59:36.263 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:59:36.475 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+11:59:36.668 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:59:36.668 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:59:36.668 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+11:59:36.779 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:59:37.857 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1001"]
+11:59:37.873 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 1001 (http) with context path ''
+11:59:37.894 [main] INFO  com.monolith.MonolithApplication - Started MonolithApplication in 8.721 seconds (process running for 9.311)
+11:59:45.177 [http-nio-1001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+11:59:45.177 [http-nio-1001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+11:59:45.178 [http-nio-1001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+11:59:45.365 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+11:59:45.384 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+11:59:45.523 [http-nio-1001-exec-1] INFO  c.m.tokenmint.beans.GameConfigInfo - PARSING :: json --> sqlDataSource
+11:59:45.533 [http-nio-1001-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - Datasource DB URL jdbc:mysql://tokenmint-mysqldb.cp5zllzhv8i3.ap-south-1.rds.amazonaws.com:3306/game_info_instance_1001?allowPublicKeyRetrieval=true&useSSL=false
+11:59:45.533 [http-nio-1001-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - INITIALIZATION :: JDBC Template Initiated for Game 
+11:59:46.303 [http-nio-1001-exec-1] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231011115945387","tokenMintTransactionIdHex":"0x47dfff57034dab","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"TXN_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+11:59:46.334 [http-nio-1001-exec-1] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+11:59:46.340 [http-nio-1001-exec-1] INFO  c.m.shared.redis.RedisClientFactory - INITIALIZING REDIS CLIENT :: for entity TokenMint
+11:59:46.826 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - CreateTokenTransactionBean :: CreateTokenTransactionBean(tokenMintTransactionId=20231011115945387, tokenMintTransactionIdHex=0x47dfff57034dab, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=TXN_2023_10, recieptientAddress=null, gameLandingPage=https://google.com, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Sepolia, chainId=11155111, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3, providerId=11155111_001), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=ProviderInfo(providerId=11155111_001, chainId=11155111, chainName=Sepolia, websocketUrl=wss://eth-sepolia.g.alchemy.com/v2/, httpUrl=https://eth-sepolia.g.alchemy.com/v2/, apiKey=zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc))
+11:59:46.844 [http-nio-1001-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231011115945387
+11:59:47.459 [http-nio-1001-exec-1] ERROR c.m.s.dao.TokenMintTransactionDAO - Error while saving to the database PreparedStatementCallback; bad SQL grammar [INSERT INTO TXN_2023_10 (tokenmint_transaction_id,transaction_summary_json) VALUES (  ?, ?)]
+11:59:47.460 [http-nio-1001-exec-1] ERROR c.m.s.dao.TokenMintTransactionDAO - Could Not save Transaction to DB
+11:59:47.460 [http-nio-1001-exec-1] ERROR c.m.t.c.c.CreateTokenController - Couldn't save the transaction to db 20231011115945387
+11:59:47.460 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+12:04:34.127 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:04:34.127 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:04:34.127 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:05:17.629 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 4648 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+12:05:17.629 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+12:05:18.288 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+12:05:18.288 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:05:18.304 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+12:05:18.320 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+12:05:18.336 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+12:05:18.337 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+12:05:19.000 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1001 (http)
+12:05:19.000 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1001"]
+12:05:19.016 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:05:19.016 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+12:05:19.113 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:05:19.113 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1410 ms
+12:05:19.243 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:05:19.743 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@33c2bd
+12:05:19.743 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:05:19.814 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:05:19.873 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+12:05:19.873 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+12:05:19.995 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+12:05:20.133 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+12:05:20.444 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+12:05:20.608 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:05:20.608 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:05:20.617 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+12:05:20.723 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:05:21.527 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1001"]
+12:05:21.543 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 1001 (http) with context path ''
+12:05:21.558 [main] INFO  com.monolith.MonolithApplication - Started MonolithApplication in 4.323 seconds (process running for 4.871)
+12:05:31.412 [http-nio-1001-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:05:31.413 [http-nio-1001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:05:31.414 [http-nio-1001-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:05:31.618 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+12:05:31.638 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+12:05:31.912 [http-nio-1001-exec-1] INFO  c.m.tokenmint.beans.GameConfigInfo - PARSING :: json --> sqlDataSource
+12:05:31.917 [http-nio-1001-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - Datasource DB URL jdbc:mysql://tokenmint-mysqldb.cp5zllzhv8i3.ap-south-1.rds.amazonaws.com:3306/game_info_instance_1001?allowPublicKeyRetrieval=true&useSSL=false
+12:05:31.917 [http-nio-1001-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - INITIALIZATION :: JDBC Template Initiated for Game 
+12:05:32.783 [http-nio-1001-exec-1] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231011120531641","tokenMintTransactionIdHex":"0x47dfff574948b9","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+12:05:32.853 [http-nio-1001-exec-1] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+12:05:32.859 [http-nio-1001-exec-1] INFO  c.m.shared.redis.RedisClientFactory - INITIALIZING REDIS CLIENT :: for entity TokenMint
+12:05:33.470 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - CreateTokenTransactionBean :: CreateTokenTransactionBean(tokenMintTransactionId=20231011120531641, tokenMintTransactionIdHex=0x47dfff574948b9, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=txn_2023_10, recieptientAddress=null, gameLandingPage=https://google.com, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Sepolia, chainId=11155111, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3, providerId=11155111_001), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=ProviderInfo(providerId=11155111_001, chainId=11155111, chainName=Sepolia, websocketUrl=wss://eth-sepolia.g.alchemy.com/v2/, httpUrl=https://eth-sepolia.g.alchemy.com/v2/, apiKey=zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc))
+12:05:33.498 [http-nio-1001-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231011120531641
+12:05:33.773 [http-nio-1001-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+12:05:33.773 [http-nio-1001-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+12:05:33.773 [http-nio-1001-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+12:06:18.672 [http-nio-1001-exec-3] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+12:06:18.672 [http-nio-1001-exec-3] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+12:06:19.484 [http-nio-1001-exec-3] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231011120618681","tokenMintTransactionIdHex":"0x47dfff574a9cb9","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+12:06:19.547 [http-nio-1001-exec-3] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+12:06:19.562 [http-nio-1001-exec-3] INFO  c.m.t.c.c.CreateTokenController - CreateTokenTransactionBean :: CreateTokenTransactionBean(tokenMintTransactionId=20231011120618681, tokenMintTransactionIdHex=0x47dfff574a9cb9, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=txn_2023_10, recieptientAddress=null, gameLandingPage=https://google.com, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Sepolia, chainId=11155111, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3, providerId=11155111_001), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=ProviderInfo(providerId=11155111_001, chainId=11155111, chainName=Sepolia, websocketUrl=wss://eth-sepolia.g.alchemy.com/v2/, httpUrl=https://eth-sepolia.g.alchemy.com/v2/, apiKey=zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc))
+12:06:19.562 [http-nio-1001-exec-3] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231011120618681
+12:06:20.162 [http-nio-1001-exec-3] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+12:06:20.162 [http-nio-1001-exec-3] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+12:06:20.162 [http-nio-1001-exec-3] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+12:06:31.347 [http-nio-1001-exec-4] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+12:06:31.347 [http-nio-1001-exec-4] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+12:06:32.056 [http-nio-1001-exec-4] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231011120631347","tokenMintTransactionIdHex":"0x47dfff574ace33","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+12:06:32.119 [http-nio-1001-exec-4] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+12:06:32.135 [http-nio-1001-exec-4] INFO  c.m.t.c.c.CreateTokenController - CreateTokenTransactionBean :: CreateTokenTransactionBean(tokenMintTransactionId=20231011120631347, tokenMintTransactionIdHex=0x47dfff574ace33, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=txn_2023_10, recieptientAddress=null, gameLandingPage=https://google.com, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Sepolia, chainId=11155111, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3, providerId=11155111_001), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=ProviderInfo(providerId=11155111_001, chainId=11155111, chainName=Sepolia, websocketUrl=wss://eth-sepolia.g.alchemy.com/v2/, httpUrl=https://eth-sepolia.g.alchemy.com/v2/, apiKey=zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc))
+12:06:32.135 [http-nio-1001-exec-4] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231011120631347
+12:06:32.732 [http-nio-1001-exec-4] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+12:06:32.732 [http-nio-1001-exec-4] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+12:06:32.732 [http-nio-1001-exec-4] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+12:06:33.567 [http-nio-1001-exec-5] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+12:06:33.567 [http-nio-1001-exec-5] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+12:06:34.227 [http-nio-1001-exec-5] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231011120633567","tokenMintTransactionIdHex":"0x47dfff574ad6df","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+12:06:34.298 [http-nio-1001-exec-5] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+12:06:34.306 [http-nio-1001-exec-5] INFO  c.m.t.c.c.CreateTokenController - CreateTokenTransactionBean :: CreateTokenTransactionBean(tokenMintTransactionId=20231011120633567, tokenMintTransactionIdHex=0x47dfff574ad6df, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=txn_2023_10, recieptientAddress=null, gameLandingPage=https://google.com, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Sepolia, chainId=11155111, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3, providerId=11155111_001), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=ProviderInfo(providerId=11155111_001, chainId=11155111, chainName=Sepolia, websocketUrl=wss://eth-sepolia.g.alchemy.com/v2/, httpUrl=https://eth-sepolia.g.alchemy.com/v2/, apiKey=zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc))
+12:06:34.306 [http-nio-1001-exec-5] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231011120633567
+12:06:34.903 [http-nio-1001-exec-5] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+12:06:34.903 [http-nio-1001-exec-5] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+12:06:34.903 [http-nio-1001-exec-5] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+12:06:35.672 [http-nio-1001-exec-6] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+12:06:35.674 [http-nio-1001-exec-6] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+12:06:36.379 [http-nio-1001-exec-6] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231011120635675","tokenMintTransactionIdHex":"0x47dfff574adf1b","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+12:06:36.447 [http-nio-1001-exec-6] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+12:06:36.454 [http-nio-1001-exec-6] INFO  c.m.t.c.c.CreateTokenController - CreateTokenTransactionBean :: CreateTokenTransactionBean(tokenMintTransactionId=20231011120635675, tokenMintTransactionIdHex=0x47dfff574adf1b, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=txn_2023_10, recieptientAddress=null, gameLandingPage=https://google.com, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Sepolia, chainId=11155111, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3, providerId=11155111_001), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=ProviderInfo(providerId=11155111_001, chainId=11155111, chainName=Sepolia, websocketUrl=wss://eth-sepolia.g.alchemy.com/v2/, httpUrl=https://eth-sepolia.g.alchemy.com/v2/, apiKey=zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc))
+12:06:36.455 [http-nio-1001-exec-6] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231011120635675
+12:06:37.119 [http-nio-1001-exec-6] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+12:06:37.120 [http-nio-1001-exec-6] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+12:06:37.120 [http-nio-1001-exec-6] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+12:37:40.502 [http-nio-1001-exec-9] INFO  c.m.t.u.c.CreateTokenUIController - **************************************** Verify Address Request **************************************
+12:37:40.504 [http-nio-1001-exec-9] INFO  c.m.t.u.c.CreateTokenUIController - ====> VerifyAddressRequest {"tokenMintTransactionId":"20231009113222343","signedMessage":"0xa8b295f499b9219698fc178a929c9d793a5eab4d7d93f991956ca12a0f40b7a61e6319143c4e161b4a3230c83bde754687f1a6d77b213e87a15e20609ad343441c","address":null}
+12:38:10.505 [http-nio-1001-exec-9] ERROR c.m.shared.dao.ConfigResourceDAO - Error Whil fetching ConfigResource REDIS_CONFIG for group TokenMint Failed to obtain JDBC Connection
+12:38:10.553 [http-nio-1001-exec-9] INFO  c.m.t.u.service.VerifyAddressHandler - Fetched CreateTokenTransactionBean from redis CreateTokenTransactionBean(tokenMintTransactionId=20231009113222343, tokenMintTransactionIdHex=0x47dffedfa42cc7, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=TXN_2023_10, recieptientAddress=null, gameLandingPage=null, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Goerli, chainId=5, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=null, providerId=null), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=null)
+12:38:10.553 [http-nio-1001-exec-9] INFO  c.m.t.u.service.VerifyAddressHandler - CreateTokenTransactionBean JSON : {"tokenMintTransactionId":"20231009113222343","tokenMintTransactionIdHex":"0x47dffedfa42cc7","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"TXN_2023_10","recieptientAddress":null,"gameLandingPage":null,"gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Goerli","chainId":"5","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":null,"providerId":null},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":null}
+12:38:10.553 [http-nio-1001-exec-9] ERROR c.m.t.u.service.VerifyAddressHandler - Validation Failed For verifyAddressRequest VerifyAddressResponse(tokenMintTransactionId=20231009113222343, address=null, addressVerified=null)
+12:38:10.553 [http-nio-1001-exec-9] INFO  c.m.t.u.c.CreateTokenUIController - ====> VerifyAddressResponse {"statusCode":"001","statusDescription":"Null or Empty Fields","tokenMintTransactionId":"20231009113222343","address":null,"addressVerified":null}
+12:38:10.563 [http-nio-1001-exec-9] INFO  c.m.t.u.c.CreateTokenUIController - **************************************** Verify Address Response **************************************
+12:49:01.531 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m10s938ms799µs800ns).
+12:49:42.330 [http-nio-1001-exec-2] INFO  c.m.t.u.c.CreateTokenUIController - **************************************** Verify Address Request **************************************
+12:49:42.332 [http-nio-1001-exec-2] INFO  c.m.t.u.c.CreateTokenUIController - ====> VerifyAddressRequest {"tokenMintTransactionId":"20231009113222343","signedMessage":"0x0f46622875ce0f179a9579055e04cb59198ba54f2916ad3a4cce9d187cd2f32a42ebf85682fb49808de898b3604e2f9985fcb0f5ae2735bf9ffde0577de9a8f81c","address":null}
+12:50:12.338 [http-nio-1001-exec-2] ERROR c.m.shared.dao.ConfigResourceDAO - Error Whil fetching ConfigResource REDIS_CONFIG for group TokenMint Failed to obtain JDBC Connection
+12:50:12.338 [http-nio-1001-exec-2] INFO  c.m.t.u.service.VerifyAddressHandler - Fetched CreateTokenTransactionBean from redis CreateTokenTransactionBean(tokenMintTransactionId=20231009113222343, tokenMintTransactionIdHex=0x47dffedfa42cc7, gameId=1001, gameTransactionId=2bd5f684-3bf7-49a0-b781-b2d3d933ad60, otp=446601, tableName=TXN_2023_10, recieptientAddress=null, gameLandingPage=null, gameInfo=GameInfo(gameId=1001, gameName=PUBG: BATTLEGROUNDS, gameParentCompany=Krafton.Inc, gameLogo=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png), ethContractInfo=ETHContractInfo(ethContractId=1001_50001, chain=Goerli, chainId=5, contractName=Pubg Inventory Zero One, operatorId=1001_50001_001, contractAddress=0xA5a8a2d59A7605a430baee0E82aE18037030739d, contractAbi=https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json, updatedBy=vaishnav, updatedOn=2023-08-20 12:09:36, etherscanContractUrl=null, providerId=null), palyerInfo=PlayerInfo(playerId=20230801115743465, tokenMintUserId=, playerName=BestHuman_012, playerProfilePic=null, playerEthAccounts=null, gameLogo=null), itemInfoBean=ItemInfoBean(itemId=1001_10001, itemCategory=OUTFIT, itemTitle=PGC 2019 Sneakers, itemDescription="PGC 2019 Sneakers" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament., itemImgUrl=https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png, itemQuantity=2, itemPrice=null), onChainTxnInfo=null, providerInfo=null)
+12:50:12.338 [http-nio-1001-exec-2] INFO  c.m.t.u.service.VerifyAddressHandler - CreateTokenTransactionBean JSON : {"tokenMintTransactionId":"20231009113222343","tokenMintTransactionIdHex":"0x47dffedfa42cc7","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"TXN_2023_10","recieptientAddress":null,"gameLandingPage":null,"gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Goerli","chainId":"5","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0xA5a8a2d59A7605a430baee0E82aE18037030739d","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":null,"providerId":null},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":null}
+12:50:12.338 [http-nio-1001-exec-2] ERROR c.m.t.u.service.VerifyAddressHandler - Validation Failed For verifyAddressRequest VerifyAddressResponse(tokenMintTransactionId=20231009113222343, address=null, addressVerified=null)
+12:50:12.338 [http-nio-1001-exec-2] INFO  c.m.t.u.c.CreateTokenUIController - ====> VerifyAddressResponse {"statusCode":"001","statusDescription":"Null or Empty Fields","tokenMintTransactionId":"20231009113222343","address":null,"addressVerified":null}
+12:50:12.338 [http-nio-1001-exec-2] INFO  c.m.t.u.c.CreateTokenUIController - **************************************** Verify Address Response **************************************
+15:35:06.031 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 15980 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+15:35:06.032 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+15:35:06.729 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:35:06.729 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:35:06.745 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+15:35:06.777 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:35:06.777 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:35:06.777 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+15:35:07.507 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:35:07.507 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:35:07.507 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:35:07.507 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+15:35:07.607 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:35:07.607 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1511 ms
+15:35:07.744 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:35:08.312 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fa7ae9
+15:35:08.312 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:35:08.360 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:35:08.444 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+15:35:08.444 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:35:08.582 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:35:08.760 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:35:09.027 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:35:09.237 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:35:09.238 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:35:09.238 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:35:09.323 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:35:10.200 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:35:10.216 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:35:10.233 [main] INFO  com.monolith.MonolithApplication - Started MonolithApplication in 4.531 seconds (process running for 5.249)
+15:35:22.150 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:35:22.152 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:35:22.153 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:35:22.349 [http-nio-8080-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+15:35:22.364 [http-nio-8080-exec-1] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+15:35:22.608 [http-nio-8080-exec-1] INFO  c.m.tokenmint.beans.GameConfigInfo - PARSING :: json --> sqlDataSource
+15:35:22.616 [http-nio-8080-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - Datasource DB URL jdbc:mysql://tokenmint-mysqldb.cp5zllzhv8i3.ap-south-1.rds.amazonaws.com:3306/game_info_instance_1001?allowPublicKeyRetrieval=true&useSSL=false
+15:35:22.616 [http-nio-8080-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - INITIALIZATION :: JDBC Template Initiated for Game 
+15:35:23.801 [http-nio-8080-exec-1] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231027153522368","tokenMintTransactionIdHex":"0x47e00312ed4ec0","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0x184a20fad1487b68e951f3094ee44fda9bf929b3","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+15:35:23.887 [http-nio-8080-exec-1] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+15:35:23.890 [http-nio-8080-exec-1] INFO  c.m.shared.redis.RedisClientFactory - INITIALIZING REDIS CLIENT :: for entity TokenMint
+15:35:24.266 [http-nio-8080-exec-1] ERROR c.monolith.shared.redis.RedisClient - !!! FATAL !!! Exception In Saving To Cache Unable to connect to Redis
+15:35:24.267 [http-nio-8080-exec-1] ERROR c.m.t.c.c.CreateTokenController - !!! FATAL !!! TransactionCould not be saved to cache
+15:35:24.267 [http-nio-8080-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231027153522368
+15:35:24.498 [http-nio-8080-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+15:35:24.498 [http-nio-8080-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+15:35:24.498 [http-nio-8080-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+15:36:33.296 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:36:33.300 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:36:33.304 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:36:38.208 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 12060 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+15:36:38.209 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+15:36:38.834 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:36:38.834 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:36:38.849 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+15:36:38.876 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:36:38.876 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:36:38.880 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+15:36:39.463 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:36:39.479 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:36:39.479 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:36:39.479 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+15:36:39.542 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:36:39.542 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1277 ms
+15:36:39.652 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:36:40.125 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bdf6bb7
+15:36:40.125 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:36:40.197 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:36:40.252 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+15:36:40.252 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:36:40.378 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:36:40.504 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:36:40.693 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:36:40.835 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:36:40.835 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:36:40.850 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:36:40.933 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:36:41.660 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:36:41.679 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:36:41.696 [main] INFO  com.monolith.MonolithApplication - Started MonolithApplication in 3.777 seconds (process running for 4.353)
+15:36:44.844 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:36:44.845 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:36:44.846 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:36:44.992 [http-nio-8080-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+15:36:45.008 [http-nio-8080-exec-1] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+15:36:45.255 [http-nio-8080-exec-1] INFO  c.m.tokenmint.beans.GameConfigInfo - PARSING :: json --> sqlDataSource
+15:36:45.260 [http-nio-8080-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - Datasource DB URL jdbc:mysql://tokenmint-mysqldb.cp5zllzhv8i3.ap-south-1.rds.amazonaws.com:3306/game_info_instance_1001?allowPublicKeyRetrieval=true&useSSL=false
+15:36:45.261 [http-nio-8080-exec-1] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - INITIALIZATION :: JDBC Template Initiated for Game 
+15:36:46.434 [http-nio-8080-exec-1] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231027153645011","tokenMintTransactionIdHex":"0x47e00312ef2dd3","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0x184a20fad1487b68e951f3094ee44fda9bf929b3","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+15:36:46.502 [http-nio-8080-exec-1] INFO  c.m.shared.dao.ConfigResourceEntity - PARSE JSON :: parsing string to RedisDataSourceInfo
+15:36:46.510 [http-nio-8080-exec-1] INFO  c.m.shared.redis.RedisClientFactory - INITIALIZING REDIS CLIENT :: for entity TokenMint
+15:36:46.891 [http-nio-8080-exec-1] ERROR c.monolith.shared.redis.RedisClient - !!! FATAL !!! Exception In Saving To Cache Unable to connect to Redis
+15:36:46.892 [http-nio-8080-exec-1] ERROR c.m.t.c.c.CreateTokenController - !!! FATAL !!! TransactionCould not be saved to cache
+15:36:46.892 [http-nio-8080-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231027153645011
+15:36:47.490 [http-nio-8080-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+15:36:47.490 [http-nio-8080-exec-1] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+15:36:47.491 [http-nio-8080-exec-1] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+15:37:06.066 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:37:06.081 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:37:06.081 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:37:43.146 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 5588 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+15:37:43.146 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+15:37:43.767 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:37:43.767 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:37:43.783 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+15:37:43.800 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:37:43.809 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:37:43.815 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Redis repository interfaces.
+15:37:44.432 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:37:44.432 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:37:44.432 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:37:44.432 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+15:37:44.496 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:37:44.509 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1293 ms
+15:37:44.641 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:37:45.463 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3704122f
+15:37:45.479 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:37:45.526 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:37:45.573 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+15:37:45.590 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:37:45.684 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:37:45.826 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:37:46.127 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:37:46.285 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:37:46.285 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:37:46.285 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:37:46.333 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameServerInteractionHandler': Injection of autowired dependencies failed
+15:37:46.333 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:37:46.333 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:37:46.729 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:37:46.729 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:37:46.729 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+15:37:46.755 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gameServerInteractionHandler': Injection of autowired dependencies failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:489)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1416)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:520)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:973)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:942)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:608)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:436)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:312)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.monolith.MonolithApplication.main(MonolithApplication.java:11)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:95)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'game-token-transfer-event-listener-url' in value "${game-token-transfer-event-listener-url}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:180)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:126)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:191)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:920)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1358)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1337)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.resolveFieldValue(AutowiredAnnotationBeanPostProcessor.java:713)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:696)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:145)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:483)
+	... 23 common frames omitted
+15:40:18.579 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 20240 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+15:40:18.581 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+15:40:19.208 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:40:19.208 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:40:19.224 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+15:40:19.241 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:40:19.241 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:40:19.256 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+15:40:19.837 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:40:19.853 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:40:19.853 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:40:19.853 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+15:40:19.916 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:40:19.916 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1278 ms
+15:40:20.036 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:40:20.537 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3704122f
+15:40:20.537 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:40:20.580 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:40:20.637 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+15:40:20.637 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:40:20.754 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:40:20.880 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:40:21.070 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:40:21.227 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:40:21.227 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:40:21.243 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:40:21.323 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:40:22.105 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:40:22.125 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:40:22.126 [main] INFO  com.monolith.MonolithApplication - Started MonolithApplication in 3.845 seconds (process running for 4.374)
+15:40:25.950 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:40:25.951 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:40:25.952 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+15:40:26.122 [http-nio-8080-exec-2] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+15:40:26.135 [http-nio-8080-exec-2] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null,"gameName":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+15:40:26.384 [http-nio-8080-exec-2] INFO  c.m.tokenmint.beans.GameConfigInfo - PARSING :: json --> sqlDataSource
+15:40:26.389 [http-nio-8080-exec-2] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - Datasource DB URL jdbc:mysql://tokenmint-mysqldb.cp5zllzhv8i3.ap-south-1.rds.amazonaws.com:3306/game_info_instance_1001?allowPublicKeyRetrieval=true&useSSL=false
+15:40:26.389 [http-nio-8080-exec-2] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - INITIALIZATION :: JDBC Template Initiated for Game 
+15:40:27.576 [http-nio-8080-exec-2] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231027154026137","tokenMintTransactionIdHex":"0x47e00312f4fe99","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","chainCurrency":"Sepolia ETH","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0x184a20fad1487b68e951f3094ee44fda9bf929b3","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null,"gameName":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+15:40:27.581 [http-nio-8080-exec-2] INFO  c.monolith.shared.dao.RedisMockDAO - Saving TransactionInfo to DB with Key TokenMint_TXN_20231027154026137 
+15:40:27.650 [http-nio-8080-exec-2] INFO  c.monolith.shared.dao.RedisMockDAO - Transaction saved sucessfullly to table Mock Redis 
+15:40:27.650 [http-nio-8080-exec-2] INFO  c.monolith.shared.dao.RedisMockDAO - Transaction Saved to db successfully
+15:40:27.650 [http-nio-8080-exec-2] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231027154026137
+15:40:28.268 [http-nio-8080-exec-2] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+15:40:28.269 [http-nio-8080-exec-2] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+15:40:28.270 [http-nio-8080-exec-2] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+15:42:51.443 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:42:51.460 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:42:51.460 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+15:42:55.638 [main] INFO  com.monolith.MonolithApplication - Starting MonolithApplication v0.0.1-SNAPSHOT using Java 18.0.1.1 with PID 6784 (D:\PP\CloudIntegrationServer\TokenMintServer\monolith-0.0.1-SNAPSHOT.jar started by vaishnav.shelke in D:\PP\CloudIntegrationServer\TokenMintServer)
+15:42:55.638 [main] INFO  com.monolith.MonolithApplication - No active profile set, falling back to 1 default profile: "default"
+15:42:56.299 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:42:56.299 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+15:42:56.315 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+15:42:56.331 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+15:42:56.331 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+15:42:56.347 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Redis repository interfaces.
+15:42:56.950 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+15:42:56.950 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+15:42:56.950 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+15:42:56.950 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.11]
+15:42:57.015 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+15:42:57.026 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1310 ms
+15:42:57.178 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+15:42:57.649 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fa7ae9
+15:42:57.652 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+15:42:57.695 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+15:42:57.743 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.6.Final
+15:42:57.743 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizer
+15:42:57.853 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:42:57.992 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+15:42:58.211 [main] INFO  o.h.b.i.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddy
+15:42:58.371 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+15:42:58.375 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+15:42:58.384 [main] INFO  c.m.shared.sqldb.JdbcEpayConfig - INITIALIZATION :: tokenmintjdbctemplate :: JDBC Template Initiated for tokenmint
+15:42:58.481 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+15:42:59.269 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+15:42:59.285 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+15:42:59.285 [main] INFO  com.monolith.MonolithApplication - Started MonolithApplication in 3.95 seconds (process running for 4.438)
+15:43:03.299 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+15:43:03.299 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+15:43:03.302 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+15:43:03.466 [http-nio-8080-exec-2] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+15:43:03.486 [http-nio-8080-exec-2] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null,"gameName":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+15:43:03.717 [http-nio-8080-exec-2] INFO  c.m.tokenmint.beans.GameConfigInfo - PARSING :: json --> sqlDataSource
+15:43:03.722 [http-nio-8080-exec-2] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - Datasource DB URL jdbc:mysql://tokenmint-mysqldb.cp5zllzhv8i3.ap-south-1.rds.amazonaws.com:3306/game_info_instance_1001?allowPublicKeyRetrieval=true&useSSL=false
+15:43:03.722 [http-nio-8080-exec-2] INFO  c.m.s.sqldb.GamesJdbcTemplateFactory - INITIALIZATION :: JDBC Template Initiated for Game 
+15:43:04.633 [http-nio-8080-exec-2] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231027154303490","tokenMintTransactionIdHex":"0x47e00312f93a02","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","chainCurrency":"Sepolia ETH","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0x184a20fad1487b68e951f3094ee44fda9bf929b3","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null,"gameName":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+15:43:04.640 [http-nio-8080-exec-2] INFO  c.monolith.shared.dao.RedisMockDAO - Saving TransactionInfo to DB with Key TokenMint_TXN_20231027154303490 
+15:43:04.714 [http-nio-8080-exec-2] INFO  c.monolith.shared.dao.RedisMockDAO - Transaction saved sucessfullly to table Mock Redis 
+15:43:04.714 [http-nio-8080-exec-2] INFO  c.monolith.shared.dao.RedisMockDAO - Transaction Saved to db successfully
+15:43:04.714 [http-nio-8080-exec-2] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231027154303490
+15:43:04.954 [http-nio-8080-exec-2] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+15:43:04.954 [http-nio-8080-exec-2] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+15:43:04.954 [http-nio-8080-exec-2] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************
+15:45:23.091 [http-nio-8080-exec-5] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Request **************************************
+15:45:23.094 [http-nio-8080-exec-5] INFO  c.m.t.c.c.CreateTokenController - ====> CreateTokenRequest :: {"statusCode":null,"statusDescription":null,"gameId":"1001","ethContractId":"1001_50001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","tokenMintTransactionId":null,"tokenMintTransactionIdHex":null,"gameItemInfo":{"itemId":"1001_10001","itemCategory":"GEAR","itemTitle":null,"itemDescription":null,"itemImgUrl":null,"itemQuantity":"2","itemPrice":null},"playerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null,"gameName":null},"registeredEthAddress":null,"gameLandingPage":"https://google.com","otp":"446601"}
+15:45:24.372 [http-nio-8080-exec-5] INFO  c.m.t.c.service.CreateTokenHandler - **** CreateTokenTransactionBean {"tokenMintTransactionId":"20231027154523094","tokenMintTransactionIdHex":"0x47e00312fc93d6","gameId":"1001","gameTransactionId":"2bd5f684-3bf7-49a0-b781-b2d3d933ad60","otp":"446601","tableName":"txn_2023_10","recieptientAddress":null,"gameLandingPage":"https://google.com","gameInfo":{"gameId":"1001","gameName":"PUBG: BATTLEGROUNDS","gameParentCompany":"Krafton.Inc","gameLogo":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-png/1001.png"},"ethContractInfo":{"ethContractId":"1001_50001","chain":"Sepolia","chainId":"11155111","chainCurrency":"Sepolia ETH","contractName":"Pubg Inventory Zero One","operatorId":"1001_50001_001","contractAddress":"0x184a20fad1487b68e951f3094ee44fda9bf929b3","contractAbi":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/eth-contract-abi/1001/1001_ABI_GOERLI.json","updatedBy":"vaishnav","updatedOn":"2023-08-20 12:09:36","etherscanContractUrl":"https://sepolia.etherscan.io/address/0x184a20fad1487b68e951f3094ee44fda9bf929b3","providerId":"11155111_001"},"palyerInfo":{"playerId":"20230801115743465","tokenMintUserId":"","playerName":"BestHuman_012","playerProfilePic":null,"playerEthAccounts":null,"gameLogo":null,"gameName":null},"itemInfoBean":{"itemId":"1001_10001","itemCategory":"OUTFIT","itemTitle":"PGC 2019 Sneakers","itemDescription":"\"PGC 2019 Sneakers\" are one of the limited-time cosmetic items that were introduced during the PUBG Global Championship event in 2019. This item is designed to commemorate the event and allow players to show their support or participation in the esports tournament.","itemImgUrl":"https://token-mint-trade.s3.ap-south-1.amazonaws.com/game-item-png/1001/1001_10001.png","itemQuantity":"2","itemPrice":null},"onChainTxnInfo":null,"providerInfo":{"providerId":"11155111_001","chainId":"11155111","chainName":"Sepolia","websocketUrl":"wss://eth-sepolia.g.alchemy.com/v2/","httpUrl":"https://eth-sepolia.g.alchemy.com/v2/","apiKey":"zE7pNLOYNG_rupkDWOJmVls72NLIQ4Rc"}}
+15:45:24.380 [http-nio-8080-exec-5] INFO  c.monolith.shared.dao.RedisMockDAO - Saving TransactionInfo to DB with Key TokenMint_TXN_20231027154523094 
+15:45:24.455 [http-nio-8080-exec-5] INFO  c.monolith.shared.dao.RedisMockDAO - Transaction saved sucessfullly to table Mock Redis 
+15:45:24.455 [http-nio-8080-exec-5] INFO  c.monolith.shared.dao.RedisMockDAO - Transaction Saved to db successfully
+15:45:24.455 [http-nio-8080-exec-5] INFO  c.m.s.dao.TokenMintTransactionDAO - Saving TransactionInfo to DB GameId 1001 and TransactionId 20231027154523094
+15:45:24.706 [http-nio-8080-exec-5] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction saved sucessfullly to table txn_2023_10 
+15:45:24.707 [http-nio-8080-exec-5] INFO  c.m.s.dao.TokenMintTransactionDAO - Transaction Saved to db successfully
+15:45:24.707 [http-nio-8080-exec-5] INFO  c.m.t.c.c.CreateTokenController - **************************************** Create Token Response **************************************

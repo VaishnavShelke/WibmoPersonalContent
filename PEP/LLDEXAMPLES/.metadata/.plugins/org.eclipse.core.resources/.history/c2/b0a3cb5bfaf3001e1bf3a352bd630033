@@ -1,0 +1,21 @@
+package elevator.service;
+
+import java.util.LinkedList;
+
+import elevator.model.Direction;
+import elevator.model.ElevatorSystem;
+
+public class ElevatorSystemService {
+
+	private ElevatorSystem es;
+	private LinkedList<Direction> instruction=null;
+	
+	public ElevatorSystemService(ElevatorSystem es) {
+		this.es = es;
+	}
+	
+	public void takeExternalInstructions(Direction instruction) {
+		for()
+	}
+}
+

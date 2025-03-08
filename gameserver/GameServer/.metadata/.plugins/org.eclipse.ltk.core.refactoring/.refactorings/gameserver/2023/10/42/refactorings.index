@@ -1,0 +1,18 @@
+1697427614749	Rename package 'com.game.inventory.gameserver'
+1697427635231	Rename package 'com.game.inventory.gs'
+1697433402913	Rename resource 'inGameItems'
+1697446052205	Move compilation unit
+1697447339883	Delete element
+1697448492947	Rename local variable 'itemInfoList'
+1697448950359	Rename type 'UserInfoDAO'
+1697448962490	Rename type 'UserInfoBean'
+1697451195676	Rename local variable 'userName'
+1697523021237	Rename method 'populateIssueTransBean'
+1697540045416	Rename local variable 'offChainItems'
+1697540086912	Rename local variable 'offchain'
+1697541782568	Rename local variable 'userInfo'
+1697541844032	Rename local variable 'userInfoList'
+1697542245976	Rename local variable 'plyinfo'
+1697543745280	Rename method 'getUserByUserIdFromDB'
+1697544441915	Rename local variable 'userInfoList'
+1697544486319	Rename local variable 'userInfo'

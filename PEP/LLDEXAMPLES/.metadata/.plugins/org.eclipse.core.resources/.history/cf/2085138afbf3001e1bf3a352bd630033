@@ -1,0 +1,27 @@
+package elevator.service;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import elevator.model.Direction;
+
+public class ElevatorSystemService {
+
+	private List<ElevatorCarService> ecarServiceList;
+	Set<Direction> unexecutedInstructions = new HashSet<>();
+	
+	public ElevatorSystemService(ElevatorCarService es) {
+		ecarServiceList = new ArrayList<>();
+	}
+	
+	public void takeExternalInstructions(Direction instruction) {
+		for(ElevatorCarService es : ecarServiceList) {
+			es.takeExternalCommand(instruction);
+		}
+	}
+	
+	
+}
+

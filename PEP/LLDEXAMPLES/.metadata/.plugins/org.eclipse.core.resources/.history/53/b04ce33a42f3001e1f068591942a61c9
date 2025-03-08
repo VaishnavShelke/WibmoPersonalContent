@@ -1,0 +1,14 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import bmshow.model.Movie;
+
+public class MovieService {
+	static Map<String,Movie> allMoviesMap = new HashMap<>();
+	
+	public static Movie createMovie(String title) {
+		
+	}
+}

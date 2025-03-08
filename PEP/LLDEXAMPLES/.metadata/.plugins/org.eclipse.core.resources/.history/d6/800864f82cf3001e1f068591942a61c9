@@ -1,0 +1,34 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import bmshow.model.Screen;
+import bmshow.model.Theater;
+
+public class TheatreService {
+
+	static Map<String,Theater> allTheatersMap = new HashMap<>();
+	
+	
+	public static String createTheatre(String theaterName) {
+		String uuid = UUID.randomUUID().toString();
+		Theater theater = new Theater(uuid,theaterName);
+		allTheatersMap.put(uuid, theater);
+		return uuid;
+	}
+	
+	public static String addScreenToTheater(String thid,String scid) {
+		if(allTheatersMap.containsKey(thid)) {
+			Theater th = allTheatersMap.get(thid);
+			Screen sc = ScreenService.createScreen(scid);
+			th.addScreen(sc);
+			
+			
+		}
+		
+		
+	}
+	
+}

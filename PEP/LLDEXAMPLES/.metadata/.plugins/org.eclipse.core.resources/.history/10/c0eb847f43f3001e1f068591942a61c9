@@ -1,0 +1,10 @@
+package bmshow;
+
+import bmshow.service.TheatreService;
+
+public class TestService {
+
+	public static void main(String[] args) {
+		Theatre th = TheatreService.createTheater("PVR Thanisandra");
+	}
+}

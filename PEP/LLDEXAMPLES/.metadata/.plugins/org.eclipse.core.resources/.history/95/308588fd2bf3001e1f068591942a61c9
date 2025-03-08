@@ -1,0 +1,8 @@
+package bmshow.model;
+
+public class Movie {
+
+	String id;
+	String title;
+
+}

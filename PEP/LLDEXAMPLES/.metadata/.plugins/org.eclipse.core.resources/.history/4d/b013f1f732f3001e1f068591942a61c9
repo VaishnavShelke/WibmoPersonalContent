@@ -1,0 +1,32 @@
+package bmshow.service;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
+
+import bmshow.model.Screen;
+import bmshow.model.Seat;
+
+public class ScreenService {
+	
+	static Map<String,Screen> allScreenMap = new HashMap<>();
+	
+
+	public static Screen createScreen(String scid,String thid) {
+		Screen newScreen = new Screen(scid,thid);
+		allScreenMap.put(scid, newScreen);
+		return newScreen;
+	}
+	
+	public static String addSeatToScreen(String scid,String row,String col) throws Exception {
+		if(allScreenMap.containsKey(scid)) {
+			Screen sc = allScreenMap.get(scid);
+			Seat st = new Seat(UUID.randomUUID().toString(),row,col);
+			sc.
+		}else {
+			throw new Exception("Screen Does not exists");
+		}
+	}
+	
+
+}
